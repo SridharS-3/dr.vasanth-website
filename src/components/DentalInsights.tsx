@@ -7,42 +7,89 @@ const DentalInsights = () => {
   const [selectedInsight, setSelectedInsight] = useState<number | null>(null);
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const insights = [
+  const insights: {
+    title: string;
+    image: string;
+    excerpt: string;
+    content: string[];
+  }[] = [
     {
       title: 'Discover 10 Easy Tips to Maintain a Healthier and Brighter Smile Today',
       image: aboutUsImage,
       excerpt: 'Learn simple daily habits that can transform your oral health and keep your smile radiant.',
-      content: 'Maintaining a healthy smile doesn\'t have to be complicated. Start by brushing twice daily with fluoride toothpaste, flossing regularly, and limiting sugary foods. Regular dental checkups every six months help catch issues early. Stay hydrated to promote saliva production, which naturally cleanses your mouth. Consider using mouthwash for extra protection against bacteria. Eat crunchy fruits and vegetables that naturally clean teeth. Avoid tobacco products that stain and damage teeth. Replace your toothbrush every three months. These simple habits will keep your smile bright and healthy for years to come.'
+      content: [
+        'Brush twice daily with fluoride toothpaste',
+        'Floss regularly to remove plaque between teeth',
+        'Visit your dentist every six months for checkups',
+        'Limit sugary foods and drinks',
+        'Stay hydrated to promote saliva production',
+        'Replace your toothbrush every three months'
+      ]
     },
     {
       title: 'Is Teeth Whitening Safe and Effective? Here\'s What You Need to Know',
       image: aboutUsImage,
       excerpt: 'Everything you need to know about professional teeth whitening procedures and their benefits.',
-      content: 'Professional teeth whitening is both safe and effective when performed by qualified dental professionals. The procedure uses carefully controlled bleaching agents to remove stains and discoloration. Results can last from several months to a few years depending on your habits. Professional whitening is more effective than over-the-counter products and provides consistent results. Side effects like temporary sensitivity are minimal and manageable. The treatment is customized to your specific needs and desired shade. Multiple sessions may be needed for optimal results. Maintaining good oral hygiene and avoiding staining foods helps preserve your bright smile.'
+      content: [
+        'Safe and effective when performed by dental professionals',
+        'Uses controlled bleaching agents to remove stains',
+        'Results last several months to years',
+        'More effective than over-the-counter products',
+        'Minimal side effects like temporary sensitivity',
+        'Customized to your specific needs and desired shade'
+      ]
     },
     {
       title: 'Braces vs. Clear Aligners: Which Orthodontic Option Fits You Best?',
       image: aboutUsImage,
       excerpt: 'Compare the pros and cons of traditional braces and modern clear aligners for your perfect smile.',
-      content: 'Choosing between braces and clear aligners depends on your specific needs. Traditional braces are highly effective for complex cases and work 24/7. Clear aligners offer a nearly invisible option with removable convenience. Braces typically cost less but require more frequent adjustments. Aligners need discipline to wear 20-22 hours daily. Treatment time varies but averages 12-24 months for both. Braces may cause initial discomfort, while aligners are generally more comfortable. Clear aligners allow easier eating and cleaning. Your orthodontist will recommend the best option based on your case complexity, lifestyle, and budget.'
+      content: [
+        'Traditional braces are highly effective for complex cases',
+        'Clear aligners offer a nearly invisible, removable option',
+        'Braces typically cost less but require more adjustments',
+        'Aligners need discipline to wear 20-22 hours daily',
+        'Treatment time averages 12-24 months for both',
+        'Your orthodontist will recommend based on your case'
+      ]
     },
     {
       title: 'What to Expect During Your First Visit to the Dentist\'s Office',
       image: aboutUsImage,
       excerpt: 'A comprehensive guide to help you prepare for your first dental appointment with confidence.',
-      content: 'Your first dental visit is an important step toward optimal oral health. Expect a comprehensive examination of your teeth, gums, and mouth. The dentist will review your medical history and discuss any concerns. X-rays may be taken to assess hidden issues. A professional cleaning removes plaque and tartar buildup. The dentist will check for cavities, gum disease, and other problems. You\'ll receive personalized advice on improving your oral hygiene routine. Treatment recommendations will be discussed if needed. The visit typically lasts 60-90 minutes. Don\'t hesitate to ask questions about procedures or concerns.'
+      content: [
+        'Comprehensive examination of teeth, gums, and mouth',
+        'Review of medical history and dental concerns',
+        'X-rays taken to assess hidden issues',
+        'Professional cleaning removes plaque buildup',
+        'Personalized oral hygiene advice provided',
+        'Treatment recommendations discussed if needed'
+      ]
     },
     {
       title: '5 Warning Signs You May Need a Root Canal and Why It\'s Not So Bad',
       image: aboutUsImage,
       excerpt: 'Understand the symptoms that indicate you need a root canal and why modern treatment is painless.',
-      content: 'Root canals have an undeserved bad reputation. Warning signs include severe toothache, prolonged sensitivity to hot or cold, tooth discoloration, swollen gums, and a persistent pimple on the gums. Modern root canal procedures are virtually painless thanks to advanced anesthesia. The treatment saves your natural tooth and prevents infection spread. Most procedures are completed in one or two visits. Recovery is quick with minimal discomfort. The alternative to root canal is tooth extraction, which is more invasive. Success rates exceed 95% with proper care. Don\'t delay treatment as infections can worsen quickly.'
+      content: [
+        'Severe toothache and prolonged sensitivity',
+        'Tooth discoloration and swollen gums',
+        'Modern procedures are virtually painless',
+        'Treatment saves your natural tooth',
+        'Success rates exceed 95% with proper care',
+        'Prevents infection from spreading'
+      ]
     },
     {
       title: 'How to Protect Your Child\'s Teeth and Prevent Cavities Early On',
       image: aboutUsImage,
       excerpt: 'Essential tips for parents to ensure their children develop strong, healthy teeth from an early age.',
-      content: 'Protecting your child\'s teeth starts early. Begin cleaning gums even before teeth emerge. Use fluoride toothpaste once teeth appear, but only a rice-grain amount for infants. Schedule the first dental visit by age one. Limit sugary drinks and snacks between meals. Encourage water drinking throughout the day. Teach proper brushing technique and supervise until age 7-8. Consider dental sealants to protect molars from decay. Make dental visits fun and positive experiences. Lead by example with your own oral hygiene. Establish a consistent routine of brushing twice daily and flossing. Early habits set the foundation for lifelong dental health.'
+      content: [
+        'Start cleaning gums before teeth emerge',
+        'Use fluoride toothpaste once teeth appear',
+        'Schedule first dental visit by age one',
+        'Limit sugary drinks and snacks',
+        'Teach proper brushing technique early',
+        'Make dental visits fun and positive experiences'
+      ]
     }
   ];
 
@@ -60,7 +107,7 @@ const DentalInsights = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f5f0eb] via-white to-[#f5f0eb] pt-20 md:pt-24 pb-12 md:pb-16">
+    <div className="min-h-screen bg-white pt-20 md:pt-24 pb-12 md:pb-16">
       {/* Detail Modal */}
       {selectedInsight !== null && (
         <motion.div
@@ -81,27 +128,34 @@ const DentalInsights = () => {
               onClick={handleClose}
               className="absolute top-6 right-6 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors"
             >
-              <FaTimes className="text-[#b8956a] text-xl" />
+              <FaTimes className="text-[#b49268] text-xl" />
             </button>
-            <div className="grid md:grid-cols-2 gap-8 p-8">
+            <div className="p-8">
               <div>
-                <h2 className="text-4xl font-light text-[#b8956a] mb-6 leading-tight">{insights[selectedInsight].title}</h2>
-                <p className="text-[#8b7355] leading-relaxed text-lg">{insights[selectedInsight].content}</p>
+                <h2 className="text-3xl font-bold text-[#b49268] mb-6">{insights[selectedInsight].title}</h2>
+                <ul className="space-y-3 mb-6">
+                  {insights[selectedInsight].content.map((point, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-[#b49268] text-xl mt-1">•</span>
+                      <span className="text-gray-800 text-lg">{point}</span>
+                    </li>
+                  ))}
+                </ul>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => window.location.href = '/book-appointment'}
-                  className="mt-8 bg-gradient-to-r from-[#b8956a] to-[#8b7355] text-white px-8 py-3 rounded-full font-semibold cursor-pointer"
+                  className="bg-[#b49268] text-white px-8 py-3 rounded-full font-semibold cursor-pointer"
                 >
                   Book Appointment
                 </motion.button>
               </div>
-              <div>
-                <div className="rounded-3xl overflow-hidden shadow-xl sticky top-8">
+              <div className="mt-8">
+                <div className="rounded-3xl overflow-hidden shadow-xl">
                   <img
                     src={insights[selectedInsight].image}
                     alt={insights[selectedInsight].title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-96 object-cover"
                   />
                 </div>
               </div>
@@ -116,9 +170,9 @@ const DentalInsights = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <p className="text-[#d4a574] mb-4 text-sm font-bold tracking-widest uppercase">Dental Insights</p>
-          <h1 className="text-5xl md:text-6xl font-light text-[#b8956a] mb-6">Expert Tips for a Healthier Smile</h1>
-          <p className="text-[#8b7355] max-w-2xl mx-auto text-lg">
+          <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4 text-sm font-bold tracking-widest uppercase">Dental Insights</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-[#36454F] mb-6">Expert Tips for a Healthier Smile</h1>
+          <p className="text-gray-800 max-w-2xl mx-auto text-lg">
             Stay informed with the latest dental care tips, treatment insights, and oral health advice from our experts.
           </p>
         </motion.div>
@@ -143,13 +197,13 @@ const DentalInsights = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-8">
-                <h3 className="text-[#b8956a] font-bold text-xl mb-4 leading-tight group-hover:text-[#8b7355] transition-colors">
+                <h3 className="text-[#b49268] font-bold text-xl mb-4 leading-tight group-hover:text-gray-800 transition-colors">
                   {insight.title}
                 </h3>
-                <p className="text-[#8b7355] leading-relaxed mb-5">
+                <p className="text-gray-800 leading-relaxed mb-5">
                   {insight.excerpt}
                 </p>
-                <button className="text-[#d4a574] font-bold hover:text-[#b8956a] transition-colors flex items-center gap-2">
+                <button className="text-[#b49268] font-bold hover:text-[#b49268] transition-colors flex items-center gap-2">
                   Read More <span className="group-hover:translate-x-2 transition-transform">→</span>
                 </button>
               </div>

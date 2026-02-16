@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
-import doctorImage from '../assets/doctor-1.jpg';
+import doctor1 from '../assets/doctor-1.jpg';
+import doctor2 from '../assets/doctor-2.jpg';
+import doctor3 from '../assets/doctor-3.jpg';
+import doctor4 from '../assets/doctor-4.jpg';
+import doctor5 from '../assets/doctor-5.jpg';
 
 const TeamPage = () => {
   const [selectedDoctor, setSelectedDoctor] = useState<number | null>(null);
@@ -11,35 +15,35 @@ const TeamPage = () => {
     {
       name: 'Dr. B. Keerthika BDS',
       role: 'Dental Surgeon',
-      image: doctorImage,
+      image: doctor1,
       bio: 'Dr. Keerthika is a highly skilled dental surgeon with expertise in comprehensive oral care. She is dedicated to providing gentle and effective treatments for all dental needs.',
       specialties: ['General Dentistry', 'Oral Surgery', 'Preventive Care']
     },
     {
       name: 'Dr. B.Mehjabeen BDS.',
       role: 'General Dentist',
-      image: doctorImage,
+      image: doctor2,
       bio: 'Dr. Mehjabeen brings compassionate care and expertise to every patient. She specializes in creating comfortable dental experiences for patients of all ages.',
       specialties: ['Family Dentistry', 'Cosmetic Procedures', 'Dental Checkups']
     },
     {
       name: 'Dr. Basil M Mathew BDS, MDS',
       role: 'Pediatric Dentist',
-      image: doctorImage,
+      image: doctor3,
       bio: 'Dr. Basil specializes in pediatric dentistry, making dental visits fun and stress-free for children. His gentle approach helps kids develop healthy dental habits.',
       specialties: ['Pediatric Dentistry', 'Child Dental Care', 'Preventive Treatments']
     },
     {
       name: 'Prof. Dr. J Sathiya Jeeva. BDS, MDS, PhD',
       role: 'Implantologist',
-      image: doctorImage,
+      image: doctor4,
       bio: 'Prof. Dr. Sathiya Jeeva is a renowned implantologist with extensive experience in dental implants and advanced restorative procedures.',
       specialties: ['Dental Implants', 'Bone Grafting', 'Full Mouth Rehabilitation']
     },
     {
       name: 'Dr. Adhavan Balaji. K L M - B.D.S. M.D.S. F.C.C.C',
       role: 'Endodontist and Aesthetic Dental Specialist',
-      image: doctorImage,
+      image: doctor5,
       bio: 'Dr. Adhavan is an expert in root canal treatments and aesthetic dentistry, combining technical precision with artistic vision for beautiful smiles.',
       specialties: ['Root Canal Treatment', 'Smile Makeovers', 'Aesthetic Dentistry']
     }
@@ -59,7 +63,7 @@ const TeamPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f5f0eb] via-white to-[#f5f0eb] pt-24 pb-16">
+    <div className="min-h-screen bg-white pt-24 pb-16">
       {/* Doctor Details Modal */}
       {selectedDoctor !== null && (
         <motion.div
@@ -80,7 +84,7 @@ const TeamPage = () => {
               onClick={handleClose}
               className="absolute top-6 right-6 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors"
             >
-              <FaTimes className="text-[#b8956a] text-xl" />
+              <FaTimes className="text-[#b49268] text-xl" />
             </button>
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div>
@@ -93,16 +97,16 @@ const TeamPage = () => {
                 </div>
               </div>
               <div>
-                <h2 className="text-4xl font-light text-[#b8956a] mb-3">{team[selectedDoctor].name}</h2>
-                <p className="text-[#d4a574] text-lg mb-6">{team[selectedDoctor].role}</p>
-                <p className="text-[#8b7355] leading-relaxed mb-6">{team[selectedDoctor].bio}</p>
+                <h2 className="text-4xl font-light text-[#b49268] mb-3">{team[selectedDoctor].name}</h2>
+                <p className="text-[#b49268] text-lg mb-6">{team[selectedDoctor].role}</p>
+                <p className="text-gray-800 leading-relaxed mb-6">{team[selectedDoctor].bio}</p>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#b8956a] mb-4">Specialties</h3>
+                  <h3 className="text-xl font-semibold text-[#b49268] mb-4">Specialties</h3>
                   <div className="space-y-2">
                     {team[selectedDoctor].specialties.map((specialty, i) => (
                       <div key={i} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-[#d4a574] rounded-full"></div>
-                        <span className="text-[#8b7355]">{specialty}</span>
+                        <div className="w-2 h-2 bg-[#b49268] rounded-full"></div>
+                        <span className="text-gray-800">{specialty}</span>
                       </div>
                     ))}
                   </div>
@@ -111,7 +115,7 @@ const TeamPage = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => window.location.href = '/book-appointment'}
-                  className="mt-8 bg-gradient-to-r from-[#b8956a] to-[#8b7355] text-white px-8 py-3 rounded-full font-semibold cursor-pointer"
+                  className="mt-8 bg-[#b49268] text-white px-8 py-3 rounded-full font-semibold cursor-pointer"
                 >
                   Book Appointment
                 </motion.button>
@@ -128,9 +132,9 @@ const TeamPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <p className="text-[#d4a574] mb-4 text-sm font-bold tracking-widest uppercase">Meet Our Team</p>
-          <h1 className="text-5xl md:text-6xl font-light text-[#b8956a] mb-6">Our Expert Dental Professionals</h1>
-          <p className="text-[#8b7355] max-w-2xl mx-auto text-lg">
+          <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4 text-sm font-bold tracking-widest uppercase">Meet Our Team</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-[#36454F] mb-6">Our Expert Dental Professionals</h1>
+          <p className="text-gray-800 max-w-2xl mx-auto text-lg">
             Our experienced dental team is here to make every visit positive and personalized with gentle hands and caring hearts.
           </p>
         </motion.div>
@@ -152,12 +156,12 @@ const TeamPage = () => {
                   alt={member.name} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-[#b8956a] font-bold text-xl mb-2">{member.name}</h3>
-                <p className="text-[#8b7355]">{member.role}</p>
-                <button className="mt-4 text-[#d4a574] font-semibold hover:text-[#b8956a] transition-colors">
+                <h3 className="text-[#b49268] font-bold text-xl mb-2">{member.name}</h3>
+                <p className="text-gray-800">{member.role}</p>
+                <button className="mt-4 text-[#b49268] font-semibold hover:text-[#b49268] transition-colors">
                   View Details →
                 </button>
               </div>

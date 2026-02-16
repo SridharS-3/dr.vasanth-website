@@ -14,10 +14,10 @@ export const treatmentData: Treatment[] = [
     id: 'oral-medicine-pathology',
     title: 'Oral Medicine and Pathology',
     images: [
+      '/src/assets/Oral Medicine and Pathology-1.png',
+      '/src/assets/Oral Medicine and Pathology-2.png',
       'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800',
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
+      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800'
     ],
     introduction: 'Oral Medicine Diagnosis pathology & Radiology is the specialty that focuses on the diagnosis and medical management of diseases of the Head and Neck. It is a unique field of dentistry that combines both Oral Medicine and Craniofacial Radiology.',
     description: 'The Department emphasizes the responsibility of the dentist to see problems affecting the oral region in the context of overall health status. Oral pathology and oral medicine is concerned with the health of the mouth and the diagnosis and management of diseases of the oral region.',
@@ -47,10 +47,10 @@ export const treatmentData: Treatment[] = [
     id: 'restorative-dentistry',
     title: 'Restorative Dentistry',
     images: [
+      '/src/assets/Restorativedentistry.png',
       'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800',
       'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
+      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800'
     ],
     introduction: 'Restorative dentistry is a branch of dentistry that focuses on restoring the function, appearance, and integrity of teeth and oral structures affected by various dental conditions or injuries. It involves the diagnosis, prevention, and treatment of oral diseases and disorders, with the goal of improving oral health and enhancing the patient\'s quality of life.',
     description: 'Restorative dentistry focused on restoring the function and appearance of damaged or missing teeth. It involves various treatments and procedures to repair teeth affected by decay, trauma, wear, or other dental issues. Restorative dentistry aims to improve oral health, restore natural tooth structure, and enhance the overall aesthetics of the smile. Common restorative procedures include dental fillings, veneers, crowns.',
@@ -78,8 +78,8 @@ export const treatmentData: Treatment[] = [
     id: 'endodontics',
     title: 'Endodontics',
     images: [
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
+      '/src/assets/Endodontics-1.png',
+      '/src/assets/Endodontics-2.png',
       'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800',
       'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
     ],
@@ -111,10 +111,10 @@ export const treatmentData: Treatment[] = [
     id: 'periodontics',
     title: 'Periodontics',
     images: [
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800',
+      '/src/assets/Periodontics-1.png',
+      '/src/assets/Periodontics-2.png',
       'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800'
+      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800'
     ],
     introduction: 'Periodontics is a specialized field of dentistry that focuses on the prevention, diagnosis, and treatment of diseases that affect the gums and supporting structures of the teeth.',
     description: 'A periodontist treats oral health issues that affect your periodontium (the tissues around your teeth). This includes your gingiva (gums), periodontal ligament (connective tissue fibers that attach your teeth to your jawbone), cementum (hard layer of calcified tissue that covers your teeth roots), and alveolar bone (the part of your jawbone that has tooth sockets).',
@@ -142,10 +142,10 @@ export const treatmentData: Treatment[] = [
     id: 'oral-maxillofacial-surgery',
     title: 'Oral and Maxillofacial Surgery',
     images: [
+      '/src/assets/Oral and maxillo facial surgery-1.png',
+      '/src/assets/Oral and maxillo facial surgery-2.png',
       'https://images.unsplash.com/photo-1609840114035-3c981407e31f?w=800',
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
+      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800'
     ],
     introduction: 'This is a branch of dentistry which deals with diagnosing and surgically treating injuries, diseases, defects of jaws, mouth, face etc. This also includes dental implants, removing decayed teeth, biopsy and taking of cysts as well as tumours of jaw and mouth, treating facial trauma and jaw reconstruction.',
     candidates: 'Patients requiring wisdom teeth removal, corrective jaw surgery, facial injury repair, complex extractions, dental implants, treatment of maxillofacial infections, or correction of facial and oral deformities are candidates for oral and maxillofacial surgery.',
@@ -170,10 +170,10 @@ export const treatmentData: Treatment[] = [
     id: 'prosthodontics',
     title: 'Prosthodontics',
     images: [
+      '/src/assets/Prosthodontics-1.png',
+      '/src/assets/Prosthodontics-2.png',
       'https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800',
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
+      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800'
     ],
     introduction: 'Prosthodontics is a specialized branch of dentistry dedicated to making dental prosthetics (artificial teeth) for damaged or missing teeth.',
     description: 'Unlike general dentists, prosthodontists specialize in repairing natural teeth and replacing missing teeth. Missing and extracted (removed) teeth are replaced with artificial teeth (dentures), dental implants, caps, or crowns. Specially trained prosthodontists also work with people with head and neck deformities, replacing missing parts of the jaw and face.',
@@ -198,10 +198,10 @@ export const treatmentData: Treatment[] = [
     id: 'orthodontics',
     title: 'Orthodontics',
     images: [
+      '/src/assets/Orthodontics-1.png',
+      '/src/assets/Orthodontics-2.png',
       'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800',
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
+      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800'
     ],
     introduction: 'It is a specialized branch of dentistry that focuses on prevention as well as treatment of mal-alignment of teeth and facial irregularities/abnormalities. Normally the irregularity of the teeth is corrected by putting braces.',
     description: 'There are 3 types of braces available: metallic (conventional and most commonly used), ceramic (very popular with adults as they look good and match with the teeth color), and invisalign (invisible and can be removed, very comfortable as there is no use of metal brackets and wires). On an average 12 to 22 months is required but the time depends on individual need and problem.',
@@ -226,10 +226,10 @@ export const treatmentData: Treatment[] = [
     id: 'implant-dentistry',
     title: 'Implant Dentistry',
     images: [
+      '/src/assets/Dental Implants-1.png',
+      '/src/assets/Dental Implants-2.png',
       'https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=800',
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
+      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800'
     ],
     introduction: 'A dental implant is man-made replacement in place of the natural teeth which enables a person to have fixed teeth. Dental implants are different from transplants taken from others. What category of dental implant is suitable for a patient depends on the individual need and condition of the teeth. An x-ray is required to check the amount of bones remaining; space available in the mouth. The dentist does an examination before finalizing which type of implant should be done.',
     description: 'Losing a tooth (or teeth) can be a shattering experience — emotionally and professionally. Aside from the obvious problems of poor physical appearance and damaged self-esteem, missing teeth also cause subsequent dilemmas like loss of chewing ability or ineffective speech. Dental implants are uniquely stable, eliminating the need for removable or partial dentures. They can also serve as an anchor for other dental prostheses like crowns, bridges and dentures. With dental implants, you will be able to eat, speak, smile and laugh confidently.',
@@ -255,10 +255,10 @@ export const treatmentData: Treatment[] = [
     id: 'laser-dentistry',
     title: 'Laser Dentistry',
     images: [
-      'https://images.unsplash.com/photo-1629909615957-be38b9e8e4c4?w=800',
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
+      '/src/assets/Laser Dentistry-1.png',
+      '/src/assets/Laser Dentistry-2.png',
+      '/src/assets/Laser Dentistry-3.png',
+      'https://images.unsplash.com/photo-1629909615957-be38b9e8e4c4?w=800'
     ],
     introduction: 'Laser dentistry is an effective and precise way of performing various dental procedures. Laser dentistry has the potential to improve various dental procedures, but all depends on the personnel skill of the dentist i.e. his ability and skill to control the exposure of laser on the gum as well as the teeth surface, and control over power output. Special care is required as the laser should not damage the surrounding tissues.',
     description: 'The laser energy is absorbed by molecules of water present in the tissues. The laser energy causes an explosion because the water molecules expand which in turn moves apart the tissue particle. Laser dentistry helps to treat gum diseases by first targeting and then vaporizing the gum tissues. Laser dentistry is very much better than the traditional procedures that cut the tissues using scalpels. Laser is used to vaporize only diseased tissues which leave the tissues healthy and free of diseases.',
@@ -283,10 +283,10 @@ export const treatmentData: Treatment[] = [
     id: 'pediatric-dentistry',
     title: 'Pediatric Dentistry',
     images: [
-      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800',
-      'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800',
-      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800',
-      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800'
+      '/src/assets/Pediatric Dentistry-1.png',
+      '/src/assets/Pediatric Dentistry-2.png',
+      '/src/assets/Pediatric Dentistry-3.png',
+      'https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=800'
     ],
     introduction: 'Pediatric dentistry specializes in/takes care of the oral health of infant, children and adolescent. This dentistry also treats children with special needs, who are physically and mentally challenged. This branch of dentistry studies child growth, psychology and development. Such dentists take care of wide variety of dental problems of children e.g. cavity, tooth decay, malocclusion, emergency care, crooked teeth etc.',
     description: 'Your child should see a dentist by their first birthday or when their first tooth appears, whichever comes first. According to American Academy of Pediatric Dentistry the child should be brought twice a year to the dental clinic. The visits may vary if the child has tooth decay, bad oral hygiene, and unusual teeth growth.',

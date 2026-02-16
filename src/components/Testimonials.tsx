@@ -1,10 +1,9 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { FaUser, FaStar } from 'react-icons/fa';
+import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [expandedCard, setExpandedCard] = useState<number | null>(null);
 
   const testimonials = [
     {
@@ -41,132 +40,91 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
+  const handlePrev = () => {
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const getVisibleTestimonials = () => {
+    const visible = [];
+    const count = window.innerWidth < 768 ? 1 : 3;
+    for (let i = 0; i < count; i++) {
+      visible.push(testimonials[(currentIndex + i) % testimonials.length]);
+    }
+    return visible;
+  };
+
   return (
-    <section id="testimonials" className="bg-white px-4 md:px-6 py-12 md:py-24">
+    <section id="testimonials" className="bg-gradient-to-b from-white to-gray-50 px-4 md:px-6 py-12 md:py-24">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-16"
         >
-          <p className="text-[#d4a574] mb-4">Testimonials</p>
-          <h2 className="text-4xl md:text-5xl font-light text-[#b8956a] mb-4">Our Happy Customers</h2>
-          <p className="text-[#8b7355] max-w-2xl mx-auto">
+          <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4">Testimonials</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#36454F] mb-4">Our Happy Customers</h2>
+          <p className="text-gray-800 max-w-2xl mx-auto">
             Join thousands of happy patients who trust us for gentle, expert care and beautiful smiles. Your perfect dental experience starts here!
           </p>
         </motion.div>
 
-        <div className="relative overflow-hidden p-2">
-          {/* Desktop - 4 cards */}
-          <motion.div 
-            key={currentIndex}
-            initial={{ x: 300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 0 }}
-            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-            className="hidden md:grid grid-cols-4 gap-6"
-          >
-            {[0, 1, 2, 3].map((offset) => {
-              const index = (currentIndex + offset) % testimonials.length;
-              const testimonial = testimonials[index];
-              const isExpanded = expandedCard === index;
-              const truncatedText = testimonial.text.length > 120 
-                ? testimonial.text.substring(0, 120) + '...' 
-                : testimonial.text;
-              
-              return (
+        <div className="relative px-12">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 300 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -300 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
+              {getVisibleTestimonials().map((testimonial, index) => (
                 <div
-                  key={index}
-                  className="bg-white rounded-3xl p-7 min-h-[280px] flex flex-col shadow-md hover:shadow-xl transition-shadow border border-[#d4a574]/10"
+                  key={`${currentIndex}-${index}`}
+                  className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all relative"
                 >
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a574] to-[#b8956a] flex items-center justify-center flex-shrink-0">
-                      <FaUser className="text-white text-sm" />
+                  <div className="absolute -top-4 left-8 w-12 h-12 bg-[#b49268] rounded-full flex items-center justify-center shadow-lg">
+                    <FaQuoteLeft className="text-white text-xl" />
+                  </div>
+                  <div className="flex gap-1 mb-4 mt-4">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} className="text-[#b49268] text-lg" />
+                    ))}
+                  </div>
+                  <p className="text-gray-800 leading-relaxed mb-6 text-sm">
+                    {testimonial.text}
+                  </p>
+                  <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#b49268] to-[#9a7a5c] flex items-center justify-center text-white font-bold text-lg">
+                      {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <h4 className="text-[#b8956a] font-bold text-sm">{testimonial.name}</h4>
-                      <p className="text-[#8b7355] text-xs italic">{testimonial.role}</p>
+                      <h4 className="text-[#36454F] font-bold">{testimonial.name}</h4>
+                      <p className="text-gray-600 text-sm">{testimonial.role}</p>
                     </div>
-                  </div>
-                  <div className="relative flex-grow">
-                    <div className="absolute -left-2 -top-2 text-[#d4a574] text-6xl font-serif opacity-40">&ldquo;</div>
-                    <p className="text-[#6b5d4f] text-sm leading-relaxed relative z-10 pl-6">
-                      {isExpanded ? testimonial.text : truncatedText}
-                    </p>
-                  </div>
-                  <div className="mt-3 flex items-center justify-between">
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className="text-[#d4a574] text-xs" />
-                      ))}
-                    </div>
-                    {testimonial.text.length > 120 && (
-                      <button
-                        onClick={() => setExpandedCard(isExpanded ? null : index)}
-                        className="text-[#b8956a] text-xs font-semibold hover:text-[#8b7355] transition-colors"
-                      >
-                        {isExpanded ? 'Show less' : 'Read more'}
-                      </button>
-                    )}
                   </div>
                 </div>
-              );
-            })}
-          </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
 
-          {/* Mobile - 1 card */}
-          <motion.div 
-            key={currentIndex}
-            initial={{ x: 300, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: -300, opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            className="md:hidden"
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-[#b49268] hover:bg-[#b49268] hover:text-white transition-all z-10"
           >
-            {(() => {
-              const testimonial = testimonials[currentIndex];
-              const isExpanded = expandedCard === currentIndex;
-              const truncatedText = testimonial.text.length > 120 
-                ? testimonial.text.substring(0, 120) + '...' 
-                : testimonial.text;
-              
-              return (
-                <div className="bg-white rounded-3xl p-7 min-h-[280px] flex flex-col shadow-md border border-[#d4a574]/10">
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a574] to-[#b8956a] flex items-center justify-center flex-shrink-0">
-                      <FaUser className="text-white text-sm" />
-                    </div>
-                    <div>
-                      <h4 className="text-[#b8956a] font-bold text-sm">{testimonial.name}</h4>
-                      <p className="text-[#8b7355] text-xs italic">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <div className="relative flex-grow">
-                    <div className="absolute -left-2 -top-2 text-[#d4a574] text-6xl font-serif opacity-40">&ldquo;</div>
-                    <p className="text-[#6b5d4f] text-sm leading-relaxed relative z-10 pl-6">
-                      {isExpanded ? testimonial.text : truncatedText}
-                    </p>
-                  </div>
-                  <div className="mt-3 flex items-center justify-between">
-                    <div className="flex gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <FaStar key={i} className="text-[#d4a574] text-xs" />
-                      ))}
-                    </div>
-                    {testimonial.text.length > 120 && (
-                      <button
-                        onClick={() => setExpandedCard(isExpanded ? null : currentIndex)}
-                        className="text-[#b8956a] text-xs font-semibold hover:text-[#8b7355] transition-colors"
-                      >
-                        {isExpanded ? 'Show less' : 'Read more'}
-                      </button>
-                    )}
-                  </div>
-                </div>
-              );
-            })()}
-          </motion.div>
+            <FaChevronLeft className="text-xl" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-[#b49268] hover:bg-[#b49268] hover:text-white transition-all z-10"
+          >
+            <FaChevronRight className="text-xl" />
+          </button>
         </div>
 
         <div className="flex justify-center gap-2 mt-8">
@@ -175,7 +133,7 @@ const Testimonials = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`h-2 rounded-full transition-all ${
-                index === currentIndex ? 'bg-[#b8956a] w-8' : 'bg-[#d4a574]/30 w-2'
+                index === currentIndex ? 'bg-[#b49268] w-8' : 'bg-gray-300 w-2'
               }`}
             />
           ))}

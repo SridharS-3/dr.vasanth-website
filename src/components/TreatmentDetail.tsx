@@ -13,7 +13,7 @@ const TreatmentDetail = () => {
   if (!treatment) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-[#8b7355]">Treatment not found</p>
+        <p className="text-gray-800">Treatment not found</p>
       </div>
     );
   }
@@ -32,7 +32,7 @@ const TreatmentDetail = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-[#b8956a] hover:text-[#8b7355] mb-8 font-semibold"
+          className="flex items-center gap-2 text-[#b49268] hover:text-gray-800 mb-8 font-semibold"
         >
           <FaArrowLeft /> Back to Home
         </motion.button>
@@ -42,8 +42,8 @@ const TreatmentDetail = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <p className="text-[#d4a574] mb-2 text-lg">Our Specialities</p>
-          <h1 className="text-5xl md:text-6xl font-light text-[#b8956a] mb-6">{treatment.title}</h1>
+          <p className="text-[#b49268] mb-2 text-lg">Our Specialities</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-[#36454F] mb-6">{treatment.title}</h1>
         </motion.div>
 
         {/* Layout 1: Overlapping images with decorative elements */}
@@ -56,7 +56,7 @@ const TreatmentDetail = () => {
               className="relative z-10 w-full md:w-2/3 h-[450px] rounded-3xl overflow-hidden shadow-2xl"
             >
               <img src={treatment.images[0]} alt={treatment.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-br from-[#b8956a]/20 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent"></div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -65,10 +65,10 @@ const TreatmentDetail = () => {
               className="absolute top-20 right-0 w-full md:w-1/2 h-[350px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white"
             >
               <img src={treatment.images[1]} alt={treatment.title} className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-tl from-[#d4a574]/30 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-tl from-black/30 to-transparent"></div>
             </motion.div>
             <div className="absolute -bottom-6 left-10 w-32 h-32 bg-[#f5f0eb] rounded-full -z-10"></div>
-            <div className="absolute top-10 right-20 w-20 h-20 bg-[#d4a574]/20 rounded-full -z-10"></div>
+            <div className="absolute top-10 right-20 w-20 h-20 bg-gray-200 rounded-full -z-10"></div>
             {treatment.images[2] && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -93,16 +93,16 @@ const TreatmentDetail = () => {
                 className="md:col-span-3 relative h-[400px] rounded-3xl overflow-hidden shadow-2xl"
               >
                 <img src={treatment.images[0]} alt={treatment.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#b8956a]/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 }}
-                className="md:col-span-2 bg-gradient-to-br from-[#b8956a] to-[#8b7355] rounded-3xl p-8 text-white shadow-xl h-[400px] flex flex-col justify-center"
+                className="md:col-span-2 bg-white rounded-3xl p-8 shadow-xl h-[400px] flex flex-col justify-center"
               >
-                <h3 className="text-3xl font-bold mb-4">Expert Care</h3>
-                <p className="text-lg leading-relaxed">Experience world-class dental treatment with our specialized team and advanced technology.</p>
+                <h3 className="text-3xl font-bold text-[#b49268] mb-4">Expert Care</h3>
+                <p className="text-gray-800 text-lg leading-relaxed">Experience world-class dental treatment with our specialized team and advanced technology.</p>
               </motion.div>
             </div>
             <div className="grid md:grid-cols-5 gap-8 items-center">
@@ -110,10 +110,10 @@ const TreatmentDetail = () => {
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
-                className="md:col-span-2 bg-[#f5f0eb] rounded-3xl p-8 shadow-xl h-[350px] flex flex-col justify-center order-2 md:order-1"
+                className="md:col-span-2 bg-white rounded-3xl p-8 shadow-xl h-[350px] flex flex-col justify-center order-2 md:order-1"
               >
-                <h3 className="text-3xl font-bold text-[#b8956a] mb-4">Your Comfort Matters</h3>
-                <p className="text-[#8b7355] text-lg leading-relaxed">We prioritize your comfort with gentle procedures and a relaxing environment.</p>
+                <h3 className="text-3xl font-bold text-[#b49268] mb-4">Your Comfort Matters</h3>
+                <p className="text-gray-800 text-lg leading-relaxed">We prioritize your comfort with gentle procedures and a relaxing environment.</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
@@ -122,7 +122,7 @@ const TreatmentDetail = () => {
                 className="md:col-span-3 relative h-[350px] rounded-3xl overflow-hidden shadow-2xl order-1 md:order-2"
               >
                 <img src={treatment.images[1]} alt={treatment.title} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-l from-[#d4a574]/40 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-l from-black/40 to-transparent"></div>
               </motion.div>
             </div>
             {treatment.images[2] && treatment.images[3] && (
@@ -158,7 +158,7 @@ const TreatmentDetail = () => {
                 transition={{ delay: 0.2 }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#d4a574] to-[#b8956a] rounded-full blur-3xl opacity-20"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-300 rounded-full blur-3xl opacity-20"></div>
                 <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-[#f5f0eb]">
                   <img src={treatment.images[0]} alt={treatment.title} className="w-full h-full object-cover" />
                 </div>
@@ -166,10 +166,10 @@ const TreatmentDetail = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border-2 border-[#d4a574]"
+                  className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border-2 border-[#b49268]"
                 >
-                  <p className="text-[#b8956a] font-bold text-lg">Trusted by 8000+</p>
-                  <p className="text-[#8b7355]">Happy Patients</p>
+                  <p className="text-[#b49268] font-bold text-lg">Trusted by 8000+</p>
+                  <p className="text-gray-800">Happy Patients</p>
                 </motion.div>
               </motion.div>
               <motion.div
@@ -180,7 +180,7 @@ const TreatmentDetail = () => {
               >
                 <div className="relative h-[300px] rounded-3xl overflow-hidden shadow-xl">
                   <img src={treatment.images[1]} alt={treatment.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#b8956a]/60 to-transparent flex items-end p-8">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
                     <div className="text-white">
                       <h3 className="text-2xl font-bold mb-2">Advanced Technology</h3>
                       <p>State-of-the-art equipment for precise treatment</p>
@@ -211,14 +211,14 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="bg-[#f5f0eb] rounded-3xl p-10 mb-12"
+            className="bg-white rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-6">Introduction</h2>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Introduction</h2>
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="md:col-span-2">
-                <p className="text-[#8b7355] leading-relaxed text-lg mb-6">{treatment.introduction}</p>
+                <p className="text-gray-800 leading-relaxed text-lg mb-6">{treatment.introduction}</p>
                 {treatment.description && (
-                  <p className="text-[#8b7355] leading-relaxed text-lg">{treatment.description}</p>
+                  <p className="text-gray-800 leading-relaxed text-lg">{treatment.description}</p>
                 )}
               </div>
               <div className="h-64 rounded-2xl overflow-hidden shadow-lg">
@@ -234,12 +234,12 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="bg-[#f5f0eb] rounded-3xl p-10 mb-12"
+            className="bg-white rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-6">Introduction</h2>
-            <p className="text-[#8b7355] leading-relaxed text-lg mb-6">{treatment.introduction}</p>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Introduction</h2>
+            <p className="text-gray-800 leading-relaxed text-lg mb-6">{treatment.introduction}</p>
             {treatment.description && (
-              <p className="text-[#8b7355] leading-relaxed text-lg">{treatment.description}</p>
+              <p className="text-gray-800 leading-relaxed text-lg">{treatment.description}</p>
             )}
           </motion.div>
         )}
@@ -250,12 +250,12 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="bg-[#f5f0eb] rounded-3xl p-10 mb-12"
+            className="bg-white rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-6">Introduction</h2>
-            <p className="text-[#8b7355] leading-relaxed text-lg mb-6">{treatment.introduction}</p>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Introduction</h2>
+            <p className="text-gray-800 leading-relaxed text-lg mb-6">{treatment.introduction}</p>
             {treatment.description && (
-              <p className="text-[#8b7355] leading-relaxed text-lg">{treatment.description}</p>
+              <p className="text-gray-800 leading-relaxed text-lg">{treatment.description}</p>
             )}
           </motion.div>
         )}
@@ -267,10 +267,10 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white border-2 border-[#d4a574] rounded-3xl p-10 mb-12"
+            className="bg-white border-2 border-[#b49268] rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
-            <p className="text-[#8b7355] leading-relaxed text-lg">{treatment.candidates}</p>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
+            <p className="text-gray-800 leading-relaxed text-lg">{treatment.candidates}</p>
           </motion.div>
         )}
 
@@ -286,9 +286,9 @@ const TreatmentDetail = () => {
               <div className="h-96 rounded-3xl overflow-hidden shadow-2xl order-2 md:order-1">
                 <img src={treatment.images[treatment.images.length - 2] || treatment.images[0]} alt={treatment.title} className="w-full h-full object-cover" />
               </div>
-              <div className="bg-white border-2 border-[#d4a574] rounded-3xl p-10 order-1 md:order-2">
-                <h2 className="text-3xl font-semibold text-[#b8956a] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
-                <p className="text-[#8b7355] leading-relaxed text-lg">{treatment.candidates}</p>
+              <div className="bg-white border-2 border-[#b49268] rounded-3xl p-10 order-1 md:order-2">
+                <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
+                <p className="text-gray-800 leading-relaxed text-lg">{treatment.candidates}</p>
               </div>
             </div>
           </motion.div>
@@ -300,10 +300,10 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white border-2 border-[#d4a574] rounded-3xl p-10 mb-12"
+            className="bg-white border-2 border-[#b49268] rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
-            <p className="text-[#8b7355] leading-relaxed text-lg">{treatment.candidates}</p>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
+            <p className="text-gray-800 leading-relaxed text-lg">{treatment.candidates}</p>
           </motion.div>
         )}
 
@@ -313,11 +313,11 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mb-12 bg-gradient-to-b from-[#f5f0eb] to-white py-16 -mx-6 px-6"
+            className="mb-12 bg-gray-50 py-16 -mx-6 px-6"
           >
-            <h2 className="text-4xl font-bold text-[#b8956a] mb-12 text-center">Treatment Procedure</h2>
+            <h2 className="text-4xl font-bold text-[#b49268] mb-12 text-center">Treatment Procedure</h2>
             <div className="max-w-6xl mx-auto relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#d4a574] via-[#b8956a] to-[#d4a574] hidden md:block"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#b49268] via-[#b49268] to-[#b49268] hidden md:block"></div>
               {treatment.procedure.map((step, index) => (
                 <motion.div
                   key={index}
@@ -332,9 +332,9 @@ const TreatmentDetail = () => {
                       <div className="w-full md:w-[calc(50%-40px)]">
                         <motion.div 
                           whileHover={{ scale: 1.03, y: -5 }}
-                          className="bg-white rounded-3xl p-8 shadow-xl border-l-4 border-[#d4a574] hover:shadow-2xl transition-all"
+                          className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all"
                         >
-                          <p className="text-[#8b7355] leading-relaxed text-lg">{step}</p>
+                          <p className="text-gray-800 leading-relaxed text-lg">{step}</p>
                         </motion.div>
                       </div>
                       <motion.div 
@@ -343,7 +343,7 @@ const TreatmentDetail = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.15 + 0.3, type: 'spring', stiffness: 200 }}
                         whileHover={{ scale: 1.2, rotate: 360 }}
-                        className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[#b8956a] to-[#8b7355] text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl z-10 hidden md:flex border-4 border-white"
+                        className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[#b49268] to-[#9a7a5c] text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl z-10 hidden md:flex border-4 border-white"
                       >
                         {index + 1}
                       </motion.div>
@@ -358,16 +358,16 @@ const TreatmentDetail = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.15 + 0.3, type: 'spring', stiffness: 200 }}
                         whileHover={{ scale: 1.2, rotate: 360 }}
-                        className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[#b8956a] to-[#8b7355] text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl z-10 hidden md:flex border-4 border-white"
+                        className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[#b49268] to-[#9a7a5c] text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl z-10 hidden md:flex border-4 border-white"
                       >
                         {index + 1}
                       </motion.div>
                       <div className="w-full md:w-[calc(50%-40px)]">
                         <motion.div 
                           whileHover={{ scale: 1.03, y: -5 }}
-                          className="bg-white rounded-3xl p-8 shadow-xl border-r-4 border-[#d4a574] hover:shadow-2xl transition-all"
+                          className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all"
                         >
-                          <p className="text-[#8b7355] leading-relaxed text-lg">{step}</p>
+                          <p className="text-gray-800 leading-relaxed text-lg">{step}</p>
                         </motion.div>
                       </div>
                     </>
@@ -386,7 +386,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-8 text-center">Key Benefits</h2>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-8 text-center">Key Benefits</h2>
             
             {/* Benefits Layout 1: Card grid with icons */}
             {layoutType === 0 && (
@@ -399,12 +399,12 @@ const TreatmentDetail = () => {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ y: -10, scale: 1.02 }}
-                    className="bg-gradient-to-br from-[#f5f0eb] to-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all border border-[#d4a574]/20"
+                    className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all"
                   >
-                    <div className="w-14 h-14 bg-gradient-to-br from-[#b8956a] to-[#d4a574] rounded-2xl flex items-center justify-center mb-4">
+                    <div className="w-14 h-14 bg-[#b49268] rounded-2xl flex items-center justify-center mb-4">
                       <FaCheckCircle className="text-white text-2xl" />
                     </div>
-                    <p className="text-[#8b7355] leading-relaxed">{benefit}</p>
+                    <p className="text-gray-800 leading-relaxed">{benefit}</p>
                   </motion.div>
                 ))}
               </div>
@@ -421,15 +421,15 @@ const TreatmentDetail = () => {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ y: -8 }}
-                    className={`bg-gradient-to-br from-white to-[#f5f0eb] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-[#d4a574]/20 ${
+                    className={`bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all ${
                       index === 0 || index === 3 ? 'md:col-span-2 md:row-span-2' : ''
                     }`}
                   >
                     <div className="flex flex-col h-full">
-                      <div className="w-14 h-14 bg-[#d4a574] rounded-2xl flex items-center justify-center mb-4">
+                      <div className="w-14 h-14 bg-[#b49268] rounded-2xl flex items-center justify-center mb-4">
                         <FaCheckCircle className="text-white text-2xl" />
                       </div>
-                      <p className="text-[#8b7355] leading-relaxed flex-1">{benefit}</p>
+                      <p className="text-gray-800 leading-relaxed flex-1">{benefit}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -448,13 +448,13 @@ const TreatmentDetail = () => {
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1 }}
                       whileHover={{ scale: 1.03 }}
-                      className="bg-white border-2 border-[#d4a574] p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
+                      className="bg-white border-2 border-gray-200 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-10 h-10 bg-[#d4a574] rounded-lg flex items-center justify-center">
+                        <div className="flex-shrink-0 w-10 h-10 bg-[#b49268] rounded-lg flex items-center justify-center">
                           <FaCheckCircle className="text-white text-lg" />
                         </div>
-                        <p className="text-[#8b7355] leading-relaxed flex-1">{benefit}</p>
+                        <p className="text-gray-800 leading-relaxed flex-1">{benefit}</p>
                       </div>
                     </motion.div>
                   ))}
@@ -490,9 +490,9 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-[#f5f0eb] rounded-3xl p-10 mb-12"
+            className="bg-white rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-8 text-center">Why Choose Us?</h2>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-8 text-center">Why Choose Us?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {whyChooseUs.map((item, index) => (
                 <motion.div
@@ -504,9 +504,9 @@ const TreatmentDetail = () => {
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-2xl p-6 text-center shadow-lg"
                 >
-                  <FaTooth className="text-[#d4a574] text-4xl mx-auto mb-4" />
-                  <h3 className="text-[#b8956a] font-semibold text-xl mb-2">{item.title}</h3>
-                  <p className="text-[#8b7355] text-sm">{item.desc}</p>
+                  <FaTooth className="text-[#b49268] text-4xl mx-auto mb-4" />
+                  <h3 className="text-[#b49268] font-semibold text-xl mb-2">{item.title}</h3>
+                  <p className="text-gray-800 text-sm">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -521,7 +521,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-8 text-center">Why Choose Us?</h2>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-8 text-center">Why Choose Us?</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {whyChooseUs.map((item, index) => (
                 <motion.div
@@ -530,14 +530,14 @@ const TreatmentDetail = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-[#f5f0eb] to-white rounded-3xl p-8 shadow-xl flex items-start gap-6 hover:shadow-2xl transition-shadow"
+                  className="bg-white rounded-3xl p-8 shadow-xl flex items-start gap-6 hover:shadow-2xl transition-shadow"
                 >
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#b8956a] to-[#d4a574] rounded-2xl flex items-center justify-center">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[#b49268] rounded-2xl flex items-center justify-center">
                     <FaTooth className="text-white text-2xl" />
                   </div>
                   <div>
-                    <h3 className="text-[#b8956a] font-bold text-xl mb-2">{item.title}</h3>
-                    <p className="text-[#8b7355]">{item.desc}</p>
+                    <h3 className="text-[#b49268] font-bold text-xl mb-2">{item.title}</h3>
+                    <p className="text-gray-800">{item.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -553,7 +553,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b8956a] mb-8 text-center">Why Choose Us?</h2>
+            <h2 className="text-3xl font-semibold text-[#b49268] mb-8 text-center">Why Choose Us?</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 {whyChooseUs.slice(0, 2).map((item, index) => (
@@ -564,15 +564,15 @@ const TreatmentDetail = () => {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ x: 10 }}
-                    className="bg-white rounded-2xl p-8 shadow-xl border-l-4 border-[#b8956a]"
+                    className="bg-white rounded-2xl p-8 shadow-xl border-l-4 border-gray-200"
                   >
                     <div className="flex items-center gap-4 mb-3">
-                      <div className="w-12 h-12 bg-[#d4a574] rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-[#b49268] rounded-lg flex items-center justify-center">
                         <FaTooth className="text-white text-xl" />
                       </div>
-                      <h3 className="text-[#b8956a] font-bold text-xl">{item.title}</h3>
+                      <h3 className="text-[#b49268] font-bold text-xl">{item.title}</h3>
                     </div>
-                    <p className="text-[#8b7355] pl-16">{item.desc}</p>
+                    <p className="text-gray-800 pl-16">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -585,15 +585,15 @@ const TreatmentDetail = () => {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ x: -10 }}
-                    className="bg-white rounded-2xl p-8 shadow-xl border-r-4 border-[#d4a574]"
+                    className="bg-white rounded-2xl p-8 shadow-xl border-r-4 border-gray-200"
                   >
                     <div className="flex items-center gap-4 mb-3">
-                      <div className="w-12 h-12 bg-[#b8956a] rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-[#b49268] rounded-lg flex items-center justify-center">
                         <FaTooth className="text-white text-xl" />
                       </div>
-                      <h3 className="text-[#b8956a] font-bold text-xl">{item.title}</h3>
+                      <h3 className="text-[#b49268] font-bold text-xl">{item.title}</h3>
                     </div>
-                    <p className="text-[#8b7355] pl-16">{item.desc}</p>
+                    <p className="text-gray-800 pl-16">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -606,13 +606,13 @@ const TreatmentDetail = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="bg-gradient-to-r from-[#b8956a] to-[#8b7355] text-white rounded-3xl p-12 text-center shadow-2xl"
+          className="bg-[#b49268] text-white rounded-3xl p-12 text-center shadow-2xl"
         >
           <h3 className="text-3xl font-semibold mb-4">Ready to Get Started?</h3>
           <p className="mb-8 text-lg">Book your appointment today and let us take care of your smile</p>
           <a 
             href="tel:+919876543210"
-            className="inline-block bg-white text-[#b8956a] px-10 py-4 rounded-full font-bold text-lg hover:bg-[#f5f0eb] transition-colors shadow-lg"
+            className="inline-block bg-white text-[#b49268] px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
           >
             Call Now: +91 98765 43210
           </a>

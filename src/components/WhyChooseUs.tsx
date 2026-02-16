@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaTooth } from 'react-icons/fa';
+import whychooseus from '../assets/whychooseus.jpg'
 
 const WhyChooseUs = () => {
   const features = [
@@ -10,7 +11,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="bg-[#f5f0eb] px-6 py-20">
+    <section id="why-choose-us" className=" px-6 py-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -31,10 +32,10 @@ const WhyChooseUs = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-center gap-4 bg-[#fef9f3] p-4 rounded-lg border-l-4 border-[#d4a574]"
+                  className="flex items-center gap-4 bg-[#fafafa] p-4 rounded-lg border-l-4 border-[#b49268]"
                 >
                   <div className="w-10 h-10 bg-[#fef3e6] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FaTooth className="text-[#d4a574] text-xl" />
+                    <FaTooth className="text-[#b49268] text-xl" />
                   </div>
                   <p className="text-[#3d4a5c] font-medium">{feature}</p>
                 </motion.div>
@@ -49,9 +50,9 @@ const WhyChooseUs = () => {
             className="flex justify-center"
           >
             <img 
-              src="/vite.svg" 
+              src={whychooseus}
               alt="Dental implants" 
-              className="w-full max-w-md"
+              className="w-full max-w-md border-gray-900 rounded-lg shadow object-cover"
             />
           </motion.div>
         </div>

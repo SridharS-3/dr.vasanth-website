@@ -4,7 +4,7 @@ import aboutUsImage from '../assets/aboutus-1.jpg';
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f5f0eb] via-white to-[#f5f0eb] pt-10 md:pt-15 pb-12 md:pb-16">
+    <div className="min-h-screen bg-white pt-10 md:pt-15 pb-12 md:pb-16">
       {/* Section 1 */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 py-0 md:py-18">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
@@ -14,11 +14,11 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="text-center md:text-left  pt-10 md:pt-0"
           >
-            <p className="text-[#d4a574] mb-3 text-sm font-bold tracking-widest uppercase">About Us</p>
-            <h2 className="text-4xl md:text-5xl font-light text-[#b8956a] mb-6 leading-tight">
+            <p className="text-[#b49268] mb-3 text-sm font-bold tracking-widest uppercase">About Us</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#36454F] mb-6 leading-tight">
               Professionals and Personalized Dental Excellence
             </h2>
-            <p className="text-[#8b7355] mb-10 leading-relaxed text-lg">
+            <p className="text-gray-800 mb-10 leading-relaxed text-lg">
               We offer high-quality dental care tailored for the whole family. From routine checkups to advanced treatments, our compassionate team ensures your smile stays healthy and confident.
             </p>
             <div className="grid grid-cols-2 gap-4 mb-10">
@@ -37,8 +37,8 @@ const AboutPage = () => {
                   whileHover={{ scale: 1.05 }}
                   className="flex items-start gap-3 p-4 bg-white rounded-2xl shadow-md"
                 >
-                  <FaCheckCircle className="text-[#b8956a] text-lg mt-0.5 flex-shrink-0" />
-                  <span className="text-[#8b7355] text-sm font-medium leading-snug">{item}</span>
+                  <FaCheckCircle className="text-[#b49268] text-lg mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-800 text-sm font-medium leading-snug">{item}</span>
                 </motion.div>
               ))}
             </div>
@@ -46,7 +46,7 @@ const AboutPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.location.href = '/book-appointment'}
-              className="bg-gradient-to-r from-[#b8956a] to-[#8b7355] text-white px-12 py-4 rounded-full font-semibold text-lg shadow-2xl cursor-pointer"
+              className="bg-[#b49268] text-white px-12 py-4 rounded-full font-semibold text-lg shadow-2xl cursor-pointer"
             >
               Book Appointment
             </motion.button>
@@ -70,7 +70,7 @@ const AboutPage = () => {
             >
               <img src={aboutUsImage} alt="Dental treatment" className="w-full h-full object-cover" />
             </motion.div>
-            <div className="absolute inset-0 bg-gradient-to-br from-[#d4a574]/10 to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-transparent rounded-full blur-3xl"></div>
           </motion.div>
         </div>
       </section>
@@ -106,11 +106,11 @@ const AboutPage = () => {
               viewport={{ once: true }}
               className="text-left"
             >
-              <p className="text-[#d4a574] mb-3 text-sm font-bold tracking-widest uppercase">Why Choose Our Dental Care</p>
-              <h2 className="text-4xl md:text-5xl font-light text-[#b8956a] mb-6 leading-tight">
+              <p className="text-[#b49268] mb-3 text-sm font-bold tracking-widest uppercase">Why Choose Our Dental Care</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[#36454F] mb-6 leading-tight">
                 Exceptional Service With a Personal Touch
               </h2>
-              <p className="text-[#8b7355] mb-10 leading-relaxed text-lg">
+              <p className="text-gray-800 mb-10 leading-relaxed text-lg">
                 Choosing the right dental provider matters. We combine expert care, advanced technology, and a warm atmosphere to ensure every visit is comfortable, efficient, and tailored to your unique needs.
               </p>
               <div className="grid grid-cols-2 gap-5">
@@ -129,8 +129,8 @@ const AboutPage = () => {
                     whileHover={{ y: -5 }}
                     className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all"
                   >
-                    <h3 className="text-[#b8956a] font-bold text-lg mb-2">{item.title}</h3>
-                    <p className="text-[#8b7355] text-sm leading-relaxed">{item.desc}</p>
+                    <h3 className="text-[#b49268] font-bold text-lg mb-2">{item.title}</h3>
+                    <p className="text-gray-800 text-sm leading-relaxed">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>

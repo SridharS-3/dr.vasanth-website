@@ -15,6 +15,7 @@ import AboutPage from './components/AboutPage'
 import TeamPage from './components/TeamPage'
 import DentalInsights from './components/DentalInsights'
 import BookAppointment from './components/BookAppointment'
+import Braces from './components/Braces'
 
 function App() {
   const location = useLocation();
@@ -32,6 +33,7 @@ function App() {
             <Hero />
             <AboutUs />
             <Services />
+            <Braces />
             <Team />
             <Testimonials />
             <WhyChooseUs />

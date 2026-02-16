@@ -1,7 +1,11 @@
 import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
   import { FaTimes } from 'react-icons/fa';
-import doctorImage from '../assets/doctor-1.jpg';
+import doctor1 from '../assets/doctor-1.jpg';
+import doctor2 from '../assets/doctor-2.jpg';
+import doctor3 from '../assets/doctor-3.jpg';
+import doctor4 from '../assets/doctor-4.jpg';
+import doctor5 from '../assets/doctor-5.jpg';
 
 const Counter = ({ value, suffix = '' }: { value: number; suffix?: string }) => {
   const count = useMotionValue(0);
@@ -42,35 +46,35 @@ const Team = () => {
     {
       name: 'Dr. B. Keerthika BDS',
       role: 'Dental Surgeon',
-      image: doctorImage,
+      image: doctor1,
       bio: 'Dr. Keerthika is a highly skilled dental surgeon with expertise in comprehensive oral care. She is dedicated to providing gentle and effective treatments for all dental needs.',
       specialties: ['General Dentistry', 'Oral Surgery', 'Preventive Care']
     },
     {
       name: 'Dr. B.Mehjabeen BDS.',
       role: 'General Dentist',
-      image: doctorImage,
+      image: doctor2,
       bio: 'Dr. Mehjabeen brings compassionate care and expertise to every patient. She specializes in creating comfortable dental experiences for patients of all ages.',
       specialties: ['Family Dentistry', 'Cosmetic Procedures', 'Dental Checkups']
     },
     {
       name: 'Dr. Basil M Mathew BDS, MDS',
       role: 'Pediatric Dentist',
-      image: doctorImage,
+      image: doctor3,
       bio: 'Dr. Basil specializes in pediatric dentistry, making dental visits fun and stress-free for children. His gentle approach helps kids develop healthy dental habits.',
       specialties: ['Pediatric Dentistry', 'Child Dental Care', 'Preventive Treatments']
     },
     {
       name: 'Prof. Dr. J Sathiya Jeeva. BDS, MDS, PhD',
       role: 'Implantologist',
-      image: doctorImage,
+      image: doctor4,
       bio: 'Prof. Dr. Sathiya Jeeva is a renowned implantologist with extensive experience in dental implants and advanced restorative procedures.',
       specialties: ['Dental Implants', 'Bone Grafting', 'Full Mouth Rehabilitation']
     },
     {
       name: 'Dr. Adhavan Balaji. K L M - B.D.S. M.D.S. F.C.C.C',
       role: 'Endodontist and Aesthetic Dental Specialist.',
-      image: doctorImage,
+      image: doctor5,
       bio: 'Dr. Adhavan is an expert in root canal treatments and aesthetic dentistry, combining technical precision with artistic vision for beautiful smiles.',
       specialties: ['Root Canal Treatment', 'Smile Makeovers', 'Aesthetic Dentistry']
     }
@@ -97,7 +101,7 @@ const Team = () => {
   };
 
   return (
-    <section id="team" className="bg-[#f5f0eb] px-4 md:px-6 py-12 md:py-20 relative">
+    <section id="team" className="bg-white px-4 md:px-6 py-12 md:py-20 relative">
       {/* Doctor Details Modal */}
       {selectedDoctor !== null && (
         <motion.div
@@ -119,7 +123,7 @@ const Team = () => {
                 onClick={handleClose}
                 className="absolute top-6 right-6 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors"
               >
-                <FaTimes className="text-[#b8956a] text-xl" />
+                <FaTimes className="text-[#b49268] text-xl" />
               </button>
               <div className="grid md:grid-cols-2 gap-8 p-8">
                 <div>
@@ -132,16 +136,16 @@ const Team = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-4xl font-light text-[#b8956a] mb-3">{team[selectedDoctor].name}</h2>
-                  <p className="text-[#d4a574] text-lg mb-6">{team[selectedDoctor].role}</p>
-                  <p className="text-[#8b7355] leading-relaxed mb-6">{team[selectedDoctor].bio}</p>
+                  <h2 className="text-4xl font-light text-[#b49268] mb-3">{team[selectedDoctor].name}</h2>
+                  <p className="text-[#b49268] text-lg mb-6">{team[selectedDoctor].role}</p>
+                  <p className="text-gray-800 leading-relaxed mb-6">{team[selectedDoctor].bio}</p>
                   <div>
-                    <h3 className="text-xl font-semibold text-[#b8956a] mb-4">Specialties</h3>
+                    <h3 className="text-xl font-semibold text-[#b49268] mb-4">Specialties</h3>
                     <div className="space-y-2">
                       {team[selectedDoctor].specialties.map((specialty, i) => (
                         <div key={i} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-[#d4a574] rounded-full"></div>
-                          <span className="text-[#8b7355]">{specialty}</span>
+                          <div className="w-2 h-2 bg-[#b49268] rounded-full"></div>
+                          <span className="text-gray-800">{specialty}</span>
                         </div>
                       ))}
                     </div>
@@ -149,7 +153,7 @@ const Team = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-8 bg-gradient-to-r from-[#b8956a] to-[#8b7355] text-white px-8 py-3 rounded-full font-semibold"
+                    className="mt-8 bg-[#b49268] text-white px-8 py-3 rounded-full font-semibold"
                   >
                     Book Appointment
                   </motion.button>
@@ -167,9 +171,9 @@ const Team = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-[#d4a574] mb-4">Meet Our Dental Team</p>
-          <h2 className="text-4xl md:text-5xl font-light text-[#b8956a] mb-4">Committed to Your Smile</h2>
-          <p className="text-[#8b7355] max-w-2xl mx-auto">
+          <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4">Meet Our Dental Team</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#36454F] mb-4">Committed to Your Smile</h2>
+          <p className="text-gray-800 max-w-2xl mx-auto">
             Our experienced dental team is here to make every visit positive and personalized.<br />
             With gentle hands and caring hearts.
           </p>
@@ -187,13 +191,13 @@ const Team = () => {
               onClick={() => handleCardClick(index)}
               className="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer"
             >
-              <div className="h-64 bg-gradient-to-b from-[#d4a574]/20 to-transparent relative overflow-hidden flex items-center justify-center">
+              <div className="h-64 bg-gradient-to-b from-[#b49268]/20 to-transparent relative overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0ic3RyaXBlcyIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Q0YTU3NCIgb3BhY2l0eT0iMC4zIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3N0cmlwZXMpIi8+PC9zdmc+')] opacity-30"></div>
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover relative z-10" />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-[#b8956a] font-semibold mb-2">{member.name}</h3>
-                <p className="text-[#8b7355] text-sm">{member.role}</p>
+                <h3 className="text-[#b49268] font-semibold mb-2">{member.name}</h3>
+                <p className="text-gray-800 text-sm">{member.role}</p>
               </div>
             </motion.div>
           ))}
@@ -209,10 +213,10 @@ const Team = () => {
               transition={{ delay: index * 0.1 }}
               className="text-center"
             >
-              <h3 className="text-4xl md:text-5xl font-light text-[#8b7355] mb-2">
+              <h3 className="text-4xl md:text-5xl font-light text-gray-800 mb-2">
                 <Counter value={stat.number} suffix={stat.suffix} />
               </h3>
-              <p className="text-[#8b7355]">{stat.label}</p>
+              <p className="text-gray-800">{stat.label}</p>
             </motion.div>
           ))}
         </div>

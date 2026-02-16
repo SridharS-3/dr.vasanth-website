@@ -6,64 +6,54 @@ const Services = () => {
 
   const services = [
     {
-      title: 'Oral Surgery',
-      description: 'Simple extractions to tricky wisdom teeth removal, dental implants, and jaw surgeries—our oral surgery care provide the best care for all your oral surgery needs.',
-      fullText: 'Our oral surgery services include wisdom teeth extraction, dental implants, jaw surgery, and complex tooth extractions. We use advanced techniques and sedation options to ensure your comfort throughout the procedure. Our experienced oral surgeons are dedicated to providing safe, effective treatment with minimal recovery time.'
+      title: 'Oral Medicine and Pathology',
+      description: 'Oral Medicine Diagnosis pathology & Radiology is the specialty that focuses on the diagnosis and medical management of diseases of the Head and Neck.',
+      fullText: 'The Department emphasizes the responsibility of the dentist to see problems affecting the oral region in the context of overall health status. Oral pathology and oral medicine is concerned with the health of the mouth and the diagnosis and management of diseases of the oral region.'
     },
     {
-      title: 'General & Family Dentistry',
-      description: 'Our experienced dentists provide high-quality care in a friendly environment. We make scheduling simple, like. Book appointments for your whole family at once. Get in, get out, and get on with your lives.',
-      fullText: 'We offer comprehensive family dental care including routine checkups, cleanings, fillings, and preventive care for all ages. Our family-friendly approach ensures everyone from children to seniors receives personalized attention and quality treatment in a comfortable setting.'
+      title: 'Restorative Dentistry',
+      description: 'Restorative dentistry focused on restoring the function and appearance of damaged or missing teeth. It involves various treatments and procedures to repair teeth affected by decay, trauma, wear, or other dental issues.',
+      fullText: 'Restorative dentistry aims to improve oral health, restore natural tooth structure, and enhance the overall aesthetics of the smile. Common restorative procedures include dental fillings, veneers, crowns.'
     },
     {
-      title: 'Full Mouth Reconstruction',
-      description: 'Rebuilding and replacing all your teeth sounds intimidating, right? Well, it doesn\'t have to be! That\'s where full mouth reconstruction comes in. This process gives you the ultimate smile makeover.',
-      fullText: 'Full mouth reconstruction combines multiple dental procedures to restore function and aesthetics. This may include dental implants, crowns, bridges, veneers, and orthodontics. We create a customized treatment plan to rebuild your smile and improve your oral health comprehensively.'
+      title: 'Endodontics',
+      description: 'Endodontics is a branch of dentistry that deals with the diagnosis, prevention, and treatment of diseases and injuries that affect the dental pulp and the surrounding tissues of the tooth.',
+      fullText: 'Root canal therapy saves infected or damaged teeth by removing the infected pulp, cleaning the canal, and sealing it. Using modern techniques and anesthesia, we make the procedure comfortable and pain-free.'
     },
     {
-      title: 'Dental Emergencies',
-      description: 'Maybe you\'ve all seen if you have a dental emergency — sometimes things happen that aren\'t normal. We recommend you seek professional help whenever you feel uncomfortable or if you experience an unusual sensation in your mouth.',
-      fullText: 'We provide immediate care for dental emergencies including severe toothaches, broken teeth, knocked-out teeth, and oral injuries. Our emergency services are available to address urgent dental issues promptly and effectively, minimizing pain and preventing further complications.'
+      title: 'Periodontics',
+      description: 'Periodontics is a specialized branch of dentistry that focuses on the prevention, diagnosis, and treatment of diseases and conditions affecting the supporting structures of the teeth.',
+      fullText: 'Our periodontal services include gum disease treatment, scaling and root planing, gum grafting, and dental implant placement. We help maintain healthy gums and prevent tooth loss.'
     },
     {
-      title: 'Comprehensive Dental Examination',
-      description: 'All new patients will receive a comprehensive oral examination from in their first treatment. Our dentists will check your mouth\'s Gum Disease, tooth decay, oral diseases, Head and Neck evaluations.',
-      fullText: 'Our thorough examination includes digital X-rays, oral cancer screening, gum disease assessment, bite analysis, and TMJ evaluation. We use advanced diagnostic tools to detect issues early and create personalized treatment plans for optimal oral health.'
+      title: 'Oral and Maxillofacial Surgery',
+      description: 'Oral and Maxillofacial Surgery is a specialized field of dentistry that focuses on the diagnosis and surgical treatment of diseases, injuries, and defects affecting the mouth, jaws, face, and neck.',
+      fullText: 'Our oral surgery services include wisdom teeth extraction, dental implants, jaw surgery, and complex tooth extractions. We use advanced techniques and sedation options to ensure your comfort throughout the procedure.'
     },
     {
-      title: 'Fillings, Crowns, & Bridges',
-      description: 'We offer a full range of restorative services from fillings, veneers, inlays, on lays, dental jewels, precious metal crowns. Our team of dentists can help smile artists repair your damaged or missing teeth and get your smile back today.',
-      fullText: 'Our restorative dentistry services restore damaged or missing teeth using high-quality materials. We offer tooth-colored fillings, porcelain crowns, and custom bridges that blend seamlessly with your natural teeth, providing both function and aesthetics.'
+      title: 'Prosthodontics',
+      description: 'Prosthodontics is a specialized branch of dentistry that focuses on the restoration and replacement of missing or damaged teeth and oral structures.',
+      fullText: 'We offer comprehensive prosthodontic services including crowns, bridges, dentures, and implant-supported restorations. Our custom solutions restore both function and aesthetics.'
     },
     {
-      title: 'Cosmetic Dentistry',
-      description: 'Leave our office with the smile you\'ve always wanted. Whether it\'s procedures like veneers, contouring, or even whitening, our cosmetic experts have you covered. The goal is to enhance the aesthetic appeal of the teeth and create a more pleasing and confident smile.',
-      fullText: 'Transform your smile with our cosmetic dentistry services including teeth whitening, porcelain veneers, smile makeovers, and tooth contouring. We combine artistry with advanced techniques to create beautiful, natural-looking results that boost your confidence.'
+      title: 'Orthodontics',
+      description: 'Orthodontics is a specialized branch of dentistry that focuses on the diagnosis, prevention, and treatment of dental and facial irregularities, particularly those related to the alignment of teeth and jaws.',
+      fullText: 'Our orthodontic services include traditional braces, clear aligners, and other corrective appliances. We create beautiful, healthy smiles through personalized treatment plans.'
     },
     {
-      title: 'Dental Implants',
-      description: 'Dental implants made simple if you\'ve lost a tooth, schedule an implant consult as Infinite Dental care center. We use the latest technological fusions the beauty of your teeth, gums, and jaw bone Discuss options for replacing missing teeth.',
-      fullText: 'Dental implants are the gold standard for tooth replacement. Our implant services include single tooth implants, multiple implants, and implant-supported dentures. Using advanced technology, we ensure precise placement and long-lasting results that look and function like natural teeth.'
+      title: 'Implant Dentistry',
+      description: 'Implant dentistry is a specialized field of dentistry that focuses on the placement and restoration of dental implants to replace missing teeth.',
+      fullText: 'Dental implants are the gold standard for tooth replacement. Our implant services include single tooth implants, multiple implants, and implant-supported dentures using advanced technology.'
     },
     {
-      title: 'Laser dentistry',
-      description: 'Laser is coherent in modern dentistry, starts with teeth whitening, bacterial killing, root canal disinfection to surgical cutting without blood loss. Laser is useful and more convenient method for comfort for patients compared to conventional treatment.',
-      fullText: 'Our laser dentistry technology offers minimally invasive treatments with faster healing times. We use lasers for gum reshaping, cavity treatment, teeth whitening, and soft tissue procedures. Laser treatments are often more comfortable, require less anesthesia, and promote quicker recovery.'
+      title: 'Laser Dentistry',
+      description: 'Laser dentistry is a modern and innovative approach to dental treatment that utilizes laser technology to perform various dental procedures with precision and minimal discomfort.',
+      fullText: 'Our laser dentistry technology offers minimally invasive treatments with faster healing times. We use lasers for gum reshaping, cavity treatment, teeth whitening, and soft tissue procedures.'
     },
     {
-      title: 'Preventive Cleaning',
-      description: 'We advise patients to undergo preventive cleaning once in 6 months based on their oral hygiene status. It offers for patient to present and it is an essential part of maintaining good oral health. Regular visits to your dentist, along with consistent oral hygiene practices at home is necessary for healthy and vanity.',
-      fullText: 'Professional dental cleanings remove plaque and tartar buildup that regular brushing can\'t reach. Our hygienists provide thorough cleanings, fluoride treatments, and personalized oral hygiene instructions to help you maintain optimal dental health between visits.'
-    },
-    {
-      title: 'Root canal treatment',
-      description: 'We get it. Nobody likes the idea of possibly needing a root canal. But here\'s what our dentists want you to know: if you have a really bad toothache caused by bacteria deep inside your tooth, root canal therapy can save your tooth and very necessary treatment for many people.',
-      fullText: 'Root canal therapy saves infected or damaged teeth by removing the infected pulp, cleaning the canal, and sealing it. Using modern techniques and anesthesia, we make the procedure comfortable and pain-free. Root canals allow you to keep your natural tooth and avoid extraction.'
-    },
-    {
-      title: 'Children Dentistry',
-      description: 'Children\'s dentistry plays a vital role in promoting lifelong oral health and establishing positive dental experiences for children. Regular dental visits and early intervention can help prevent dental issues. Your child should see a dentist by their first birthday or when their first tooth appears, whichever comes first. Our first dental appointments are quick, gentle, and designed to be a positive experience.',
-      fullText: 'Our pediatric dentistry services create positive dental experiences for children. We provide gentle care including cleanings, fluoride treatments, sealants, and cavity treatment in a fun, child-friendly environment. Early dental visits help establish good oral hygiene habits and prevent future dental problems.'
+      title: 'Pediatric Dentistry',
+      description: 'Pediatric dentistry is a specialized branch of dentistry that focuses on the oral health and dental care of infants, children, and adolescents.',
+      fullText: 'Our pediatric dentistry services create positive dental experiences for children. We provide gentle care including cleanings, fluoride treatments, sealants, and cavity treatment in a fun, child-friendly environment.'
     }
   ];
 
@@ -76,8 +66,8 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-light text-[#d4a574] mb-4">Our Services</h2>
-          <p className="text-[#8b7355] max-w-3xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#3d4a5c] mb-4">Our Services</h2>
+          <p className="text-gray-800 max-w-3xl mx-auto">
             From general dentistry wellness, to perfecting cosmetic imperfections, to restoring implants and fillings, to those painful oral emergencies—we have you covered.
           </p>
         </motion.div>
@@ -93,11 +83,11 @@ const Services = () => {
               whileHover={{ y: -5 }}
               className="bg-white rounded-2xl p-8 shadow-lg relative"
             >
-              <div className="w-12 h-12 bg-[#d4a574] rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-white border-2 border-[#b49268] rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl">🦷</span>
               </div>
-              <h3 className="text-xl font-semibold text-[#8b7355] mb-3">{service.title}</h3>
-              <p className="text-[#8b7355] text-sm leading-relaxed mb-4">{service.description}</p>
+              <h3 className="text-xl font-bold text-[#36454F] mb-3">{service.title}</h3>
+              <p className="text-gray-800 text-sm leading-relaxed mb-4">{service.description}</p>
               
               <motion.button
                 onHoverStart={() => setHoveredCard(index)}
@@ -109,7 +99,7 @@ const Services = () => {
                   duration: 0.5,
                   ease: [0.34, 1.56, 0.64, 1]
                 }}
-                className="h-10 border-2 border-[#b8956a] rounded-full flex items-center text-[#b8956a] hover:bg-[#b8956a] hover:text-white transition-colors overflow-hidden relative"
+                className="h-10 border-2 border-[#b49268] rounded-full flex items-center text-[#b49268] hover:bg-[#b49268] hover:text-white transition-colors overflow-hidden relative"
               >
                 <motion.div
                   animate={{

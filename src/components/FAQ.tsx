@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaChevronDown, FaPlay } from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa';
+import faqImage from '../assets/faq.jpg';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -38,21 +39,12 @@ const FAQ = () => {
             viewport={{ once: true }}
             className="flex items-center justify-center"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-video bg-gradient-to-br from-[#d4a574]/20 to-[#b8956a]/20 w-full">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl w-full">
               <img 
-                src="/vite.svg" 
-                alt="Dental care video" 
+                src={faqImage} 
+                alt="Dental care" 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="w-20 h-20 rounded-full bg-[#b8956a] flex items-center justify-center shadow-xl"
-                >
-                  <FaPlay className="text-white text-2xl ml-1" />
-                </motion.button>
-              </div>
             </div>
           </motion.div>
 
@@ -61,8 +53,8 @@ const FAQ = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-[#d4a574] mb-4">Everything You Need To Know</p>
-            <h2 className="text-4xl md:text-5xl font-light text-[#b8956a] mb-8">
+            <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4">Everything You Need To Know</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#3d4a5c] mb-8">
               Frequently Asked<br />Questions
             </h2>
 
@@ -80,11 +72,11 @@ const FAQ = () => {
                     onClick={() => setOpenIndex(openIndex === index ? null : index)}
                     className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#f5f0eb] transition-colors"
                   >
-                    <span className="text-[#8b7355] font-medium">{faq.question}</span>
+                    <span className="text-gray-800 font-medium">{faq.question}</span>
                     <motion.span
                       animate={{ rotate: openIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-[#b8956a] flex-shrink-0 ml-4"
+                      className="text-[#b49268] flex-shrink-0 ml-4"
                     >
                       <FaChevronDown />
                     </motion.span>
@@ -98,7 +90,7 @@ const FAQ = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-4 text-[#8b7355] text-sm leading-relaxed">
+                    <div className="px-6 pb-4 text-gray-800 text-sm leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>
