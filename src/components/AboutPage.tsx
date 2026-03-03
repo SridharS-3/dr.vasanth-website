@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { colors } from '../colors';
 import { FaCheckCircle } from 'react-icons/fa';
 import aboutUsImage from '../assets/aboutus-1.jpg';
 
@@ -14,8 +15,8 @@ const AboutPage = () => {
             viewport={{ once: true }}
             className="text-center md:text-left  pt-10 md:pt-0"
           >
-            <p className="text-[#b49268] mb-3 text-sm font-bold tracking-widest uppercase">About Us</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#36454F] mb-6 leading-tight">
+            <p className="text-[var(--primary)] mb-3 text-sm font-bold tracking-widest uppercase">About Us</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--secondary)] mb-6 leading-tight">
               Professionals and Personalized Dental Excellence
             </h2>
             <p className="text-gray-800 mb-10 leading-relaxed text-lg">
@@ -37,7 +38,7 @@ const AboutPage = () => {
                   whileHover={{ scale: 1.05 }}
                   className="flex items-start gap-3 p-4 bg-white rounded-2xl shadow-md"
                 >
-                  <FaCheckCircle className="text-[#b49268] text-lg mt-0.5 flex-shrink-0" />
+                  <FaCheckCircle className="text-[var(--primary)] text-lg mt-0.5 flex-shrink-0" />
                   <span className="text-gray-800 text-sm font-medium leading-snug">{item}</span>
                 </motion.div>
               ))}
@@ -46,7 +47,7 @@ const AboutPage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.location.href = '/book-appointment'}
-              className="bg-[#b49268] text-white px-12 py-4 rounded-full font-semibold text-lg shadow-2xl cursor-pointer"
+              className="bg-[var(--primary)] text-white px-12 py-4 rounded-full font-semibold text-lg shadow-2xl cursor-pointer"
             >
               Book Appointment
             </motion.button>
@@ -106,8 +107,8 @@ const AboutPage = () => {
               viewport={{ once: true }}
               className="text-left"
             >
-              <p className="text-[#b49268] mb-3 text-sm font-bold tracking-widest uppercase">Why Choose Our Dental Care</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-[#36454F] mb-6 leading-tight">
+              <p className="text-[var(--primary)] mb-3 text-sm font-bold tracking-widest uppercase">Why Choose Our Dental Care</p>
+              <h2 className="text-4xl md:text-5xl font-bold text-[var(--secondary)] mb-6 leading-tight">
                 Exceptional Service With a Personal Touch
               </h2>
               <p className="text-gray-800 mb-10 leading-relaxed text-lg">
@@ -129,7 +130,7 @@ const AboutPage = () => {
                     whileHover={{ y: -5 }}
                     className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all"
                   >
-                    <h3 className="text-[#b49268] font-bold text-lg mb-2">{item.title}</h3>
+                    <h3 className="text-[var(--primary)] font-bold text-lg mb-2">{item.title}</h3>
                     <p className="text-gray-800 text-sm leading-relaxed">{item.desc}</p>
                   </motion.div>
                 ))}

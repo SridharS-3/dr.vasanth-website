@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import { colors } from '../colors';
 import { useState, useEffect } from 'react';
 import { FaQuoteLeft, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
@@ -9,7 +10,7 @@ const Testimonials = () => {
     {
       name: 'Karthika',
       role: 'Patient',
-      text: 'Hi extracted from Ivory dentistry.It was vry good rience pain at any stage doctor work was clean.I ommend this clinic to my frds.'
+      text: 'Hi extracted from Dental Clip. Dental Clinic.It was vry good rience pain at any stage doctor work was clean.I ommend this clinic to my frds.'
     },
     {
       name: 'Senthil Raja',
@@ -19,12 +20,12 @@ const Testimonials = () => {
     {
       name: 'Santhosh J',
       role: 'Patient',
-      text: 'Ivory Dental Clinic offers exceptional dental care with a highly professional and friendly team. The clinic is well-maintained, and appointments are efficiently managed. My wife had a very comfortable experience, and the treatment was thorough and effective. Highly recommended for anyone seeking quality dental services in Salem.'
+      text: 'Dental Clip. Dental Clinic offers exceptional dental care with a highly professional and friendly team. The clinic is well-maintained, and appointments are efficiently managed. My wife had a very comfortable experience, and the treatment was thorough and effective. Highly recommended for anyone seeking quality dental services in Salem.'
     },
     {
       name: 'Shiva',
       role: 'Patient',
-      text: 'My recent visit to Ivory Dental Hospital was an amazing experience. The hospital has hygienic, comfortable facilities and up-to-date technologies.I was put at ease as soon as I came in by the friendly and extremely professional staff. The doctors and staff were professional.He took the time to go over my treatment options and answer all of my questions. The clinic is highly convenient because it provides a variety of dental services under one roof, such as orthodontics, cosmetic operations, and general dentistry. The post-treatment care was similarly remarkable, and the team makes sure the patient is well taken care of.I felt secure and pleased with my care when I left the hospital.'
+      text: 'My recent visit to Dental Clip. Dental Clinic Hospital was an amazing experience. The hospital has hygienic, comfortable facilities and up-to-date technologies.I was put at ease as soon as I came in by the friendly and extremely professional staff. The doctors and staff were professional.He took the time to go over my treatment options and answer all of my questions. The clinic is highly convenient because it provides a variety of dental services under one roof, such as orthodontics, cosmetic operations, and general dentistry. The post-treatment care was similarly remarkable, and the team makes sure the patient is well taken care of.I felt secure and pleased with my care when I left the hospital.'
     },
     {
       name: 'Krishna Prakash',
@@ -66,8 +67,8 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4">Testimonials</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#36454F] mb-4">Our Happy Customers</h2>
+          <p className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4">Testimonials</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--secondary)] mb-4">Our Happy Customers</h2>
           <p className="text-gray-800 max-w-2xl mx-auto">
             Join thousands of happy patients who trust us for gentle, expert care and beautiful smiles. Your perfect dental experience starts here!
           </p>
@@ -88,23 +89,23 @@ const Testimonials = () => {
                   key={`${currentIndex}-${index}`}
                   className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all relative"
                 >
-                  <div className="absolute -top-4 left-8 w-12 h-12 bg-[#b49268] rounded-full flex items-center justify-center shadow-lg">
+                  <div className="absolute -top-4 left-8 w-12 h-12 bg-[var(--primary)] rounded-full flex items-center justify-center shadow-lg">
                     <FaQuoteLeft className="text-white text-xl" />
                   </div>
                   <div className="flex gap-1 mb-4 mt-4">
                     {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} className="text-[#b49268] text-lg" />
+                      <FaStar key={i} className="text-[var(--primary)] text-lg" />
                     ))}
                   </div>
                   <p className="text-gray-800 leading-relaxed mb-6 text-sm">
                     {testimonial.text}
                   </p>
                   <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#b49268] to-[#9a7a5c] flex items-center justify-center text-white font-bold text-lg">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[var(--primary)] to-[#9a7a5c] flex items-center justify-center text-white font-bold text-lg">
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <h4 className="text-[#36454F] font-bold">{testimonial.name}</h4>
+                      <h4 className="text-[var(--secondary)] font-bold">{testimonial.name}</h4>
                       <p className="text-gray-600 text-sm">{testimonial.role}</p>
                     </div>
                   </div>
@@ -115,13 +116,13 @@ const Testimonials = () => {
 
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-[#b49268] hover:bg-[#b49268] hover:text-white transition-all z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all z-10"
           >
             <FaChevronLeft className="text-xl" />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-[#b49268] hover:bg-[#b49268] hover:text-white transition-all z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-all z-10"
           >
             <FaChevronRight className="text-xl" />
           </button>
@@ -133,7 +134,7 @@ const Testimonials = () => {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`h-2 rounded-full transition-all ${
-                index === currentIndex ? 'bg-[#b49268] w-8' : 'bg-gray-300 w-2'
+                index === currentIndex ? 'bg-[var(--primary)] w-8' : 'bg-gray-300 w-2'
               }`}
             />
           ))}

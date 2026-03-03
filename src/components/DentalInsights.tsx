@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { colors } from '../colors';
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import aboutUsImage from '../assets/aboutus-1.jpg';
@@ -128,15 +129,15 @@ const DentalInsights = () => {
               onClick={handleClose}
               className="absolute top-6 right-6 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors"
             >
-              <FaTimes className="text-[#b49268] text-xl" />
+              <FaTimes className="text-[var(--primary)] text-xl" />
             </button>
             <div className="p-8">
               <div>
-                <h2 className="text-3xl font-bold text-[#b49268] mb-6">{insights[selectedInsight].title}</h2>
+                <h2 className="text-3xl font-bold text-[var(--primary)] mb-6">{insights[selectedInsight].title}</h2>
                 <ul className="space-y-3 mb-6">
                   {insights[selectedInsight].content.map((point, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="text-[#b49268] text-xl mt-1">•</span>
+                      <span className="text-[var(--primary)] text-xl mt-1">•</span>
                       <span className="text-gray-800 text-lg">{point}</span>
                     </li>
                   ))}
@@ -145,7 +146,7 @@ const DentalInsights = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => window.location.href = '/book-appointment'}
-                  className="bg-[#b49268] text-white px-8 py-3 rounded-full font-semibold cursor-pointer"
+                  className="bg-[var(--primary)] text-white px-8 py-3 rounded-full font-semibold cursor-pointer"
                 >
                   Book Appointment
                 </motion.button>
@@ -170,8 +171,8 @@ const DentalInsights = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4 text-sm font-bold tracking-widest uppercase">Dental Insights</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-[#36454F] mb-6">Expert Tips for a Healthier Smile</h1>
+          <p className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4 text-sm font-bold tracking-widest uppercase">Dental Insights</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-[var(--secondary)] mb-6">Expert Tips for a Healthier Smile</h1>
           <p className="text-gray-800 max-w-2xl mx-auto text-lg">
             Stay informed with the latest dental care tips, treatment insights, and oral health advice from our experts.
           </p>
@@ -197,13 +198,13 @@ const DentalInsights = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               <div className="p-8">
-                <h3 className="text-[#b49268] font-bold text-xl mb-4 leading-tight group-hover:text-gray-800 transition-colors">
+                <h3 className="text-[var(--primary)] font-bold text-xl mb-4 leading-tight group-hover:text-gray-800 transition-colors">
                   {insight.title}
                 </h3>
                 <p className="text-gray-800 leading-relaxed mb-5">
                   {insight.excerpt}
                 </p>
-                <button className="text-[#b49268] font-bold hover:text-[#b49268] transition-colors flex items-center gap-2">
+                <button className="text-[var(--primary)] font-bold hover:text-[var(--primary)] transition-colors flex items-center gap-2">
                   Read More <span className="group-hover:translate-x-2 transition-transform">→</span>
                 </button>
               </div>

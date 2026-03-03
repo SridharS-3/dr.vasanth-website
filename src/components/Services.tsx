@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { colors } from '../colors';
 import { useState } from 'react';
 
 const Services = () => {
@@ -66,7 +67,7 @@ const Services = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3d4a5c] mb-4">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--tertiary)] mb-4">Our Services</h2>
           <p className="text-gray-800 max-w-3xl mx-auto">
             From general dentistry wellness, to perfecting cosmetic imperfections, to restoring implants and fillings, to those painful oral emergencies—we have you covered.
           </p>
@@ -83,10 +84,10 @@ const Services = () => {
               whileHover={{ y: -5 }}
               className="bg-white rounded-2xl p-8 shadow-lg relative"
             >
-              <div className="w-12 h-12 bg-white border-2 border-[#b49268] rounded-full flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-white border-2 border-[var(--primary)] rounded-full flex items-center justify-center mb-4">
                 <span className="text-2xl">🦷</span>
               </div>
-              <h3 className="text-xl font-bold text-[#36454F] mb-3">{service.title}</h3>
+              <h3 className="text-xl font-bold text-[var(--secondary)] mb-3">{service.title}</h3>
               <p className="text-gray-800 text-sm leading-relaxed mb-4">{service.description}</p>
               
               <motion.button
@@ -99,7 +100,7 @@ const Services = () => {
                   duration: 0.5,
                   ease: [0.34, 1.56, 0.64, 1]
                 }}
-                className="h-10 border-2 border-[#b49268] rounded-full flex items-center text-[#b49268] hover:bg-[#b49268] hover:text-white transition-colors overflow-hidden relative"
+                className="h-10 border-2 border-[var(--primary)] rounded-full flex items-center text-[var(--primary)] hover:bg-[var(--primary)] hover:text-white transition-colors overflow-hidden relative"
               >
                 <motion.div
                   animate={{

@@ -1,4 +1,5 @@
 import { motion, useMotionValue, useTransform, animate, useInView } from 'framer-motion';
+import { colors } from '../colors';
 import { useEffect, useState, useRef } from 'react';
   import { FaTimes } from 'react-icons/fa';
 import doctor1 from '../assets/doctor-1.jpg';
@@ -123,7 +124,7 @@ const Team = () => {
                 onClick={handleClose}
                 className="absolute top-6 right-6 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors"
               >
-                <FaTimes className="text-[#b49268] text-xl" />
+                <FaTimes className="text-[var(--primary)] text-xl" />
               </button>
               <div className="grid md:grid-cols-2 gap-8 p-8">
                 <div>
@@ -136,15 +137,15 @@ const Team = () => {
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-4xl font-light text-[#b49268] mb-3">{team[selectedDoctor].name}</h2>
-                  <p className="text-[#b49268] text-lg mb-6">{team[selectedDoctor].role}</p>
+                  <h2 className="text-4xl font-light text-[var(--primary)] mb-3">{team[selectedDoctor].name}</h2>
+                  <p className="text-[var(--primary)] text-lg mb-6">{team[selectedDoctor].role}</p>
                   <p className="text-gray-800 leading-relaxed mb-6">{team[selectedDoctor].bio}</p>
                   <div>
-                    <h3 className="text-xl font-semibold text-[#b49268] mb-4">Specialties</h3>
+                    <h3 className="text-xl font-semibold text-[var(--primary)] mb-4">Specialties</h3>
                     <div className="space-y-2">
                       {team[selectedDoctor].specialties.map((specialty, i) => (
                         <div key={i} className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-[#b49268] rounded-full"></div>
+                          <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
                           <span className="text-gray-800">{specialty}</span>
                         </div>
                       ))}
@@ -153,7 +154,7 @@ const Team = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-8 bg-[#b49268] text-white px-8 py-3 rounded-full font-semibold"
+                    className="mt-8 bg-[var(--primary)] text-white px-8 py-3 rounded-full font-semibold"
                   >
                     Book Appointment
                   </motion.button>
@@ -171,8 +172,8 @@ const Team = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4">Meet Our Dental Team</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#36454F] mb-4">Committed to Your Smile</h2>
+          <p className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4">Meet Our Dental Team</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--secondary)] mb-4">Committed to Your Smile</h2>
           <p className="text-gray-800 max-w-2xl mx-auto">
             Our experienced dental team is here to make every visit positive and personalized.<br />
             With gentle hands and caring hearts.
@@ -191,12 +192,12 @@ const Team = () => {
               onClick={() => handleCardClick(index)}
               className="bg-white rounded-2xl overflow-hidden shadow-lg cursor-pointer"
             >
-              <div className="h-64 bg-gradient-to-b from-[#b49268]/20 to-transparent relative overflow-hidden flex items-center justify-center">
+              <div className="h-64 bg-gradient-to-b from-[var(--primary)]/20 to-transparent relative overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0ic3RyaXBlcyIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwMCI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Q0YTU3NCIgb3BhY2l0eT0iMC4zIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3N0cmlwZXMpIi8+PC9zdmc+')] opacity-30"></div>
                 <img src={member.image} alt={member.name} className="w-full h-full object-cover relative z-10" />
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-[#b49268] font-semibold mb-2">{member.name}</h3>
+                <h3 className="text-[var(--primary)] font-semibold mb-2">{member.name}</h3>
                 <p className="text-gray-800 text-sm">{member.role}</p>
               </div>
             </motion.div>

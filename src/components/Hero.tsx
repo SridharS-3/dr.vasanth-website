@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FaClock, FaPhoneAlt, FaStar } from 'react-icons/fa';
+import { colors } from '../colors';
 import doctor1 from '../assets/doctor-1.jpg';
 import doctor2 from '../assets/doctor-2.jpg';
 import doctor3 from '../assets/doctor-3.jpg';
@@ -40,17 +41,17 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4 text-lg font-semibold text-center md:text-left"
+            className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4 text-lg font-semibold text-center md:text-left"
           >
-            Ivory Dentistry
+            Dental Clip. Dental Clinic
           </motion.p>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-[#36454F] mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-7xl font-bold text-[var(--secondary)] mb-6 leading-tight"
           >
-            The Most Trusted Dental Clinic in Salem
+            The Most Trusted Dental Clip. Dental Clinic in Salem
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -66,7 +67,7 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="text-gray-800 mb-8 leading-relaxed"
           >
-            At <span className="font-semibold text-[#b49268]">Ivory Dentistry</span>, we provide world-class dental solutions tailored to every member of your family. From routine <span className="font-semibold">dental checkups</span> to advanced <span className="font-semibold">laser treatments</span> and <span className="font-semibold">smile makeovers</span>, our expert team in Salem ensures a painless and comfortable experience. We combine state-of-the-art technology with a gentle touch to keep your smile healthy, bright, and confident.
+            At <span className="font-semibold text-[var(--primary)]">Dental Clip. Dental Clinic</span>, we provide world-class dental solutions tailored to every member of your family. From routine <span className="font-semibold">dental checkups</span> to advanced <span className="font-semibold">laser treatments</span> and <span className="font-semibold">smile makeovers</span>, our expert team in Salem ensures a painless and comfortable experience. We combine state-of-the-art technology with a gentle touch to keep your smile healthy, bright, and confident.
           </motion.p>
           <motion.button 
             initial={{ opacity: 0 }}
@@ -75,7 +76,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => window.location.href = '/book-appointment'}
-            className="bg-[#b49268] text-white px-10 py-4 rounded-full hover:shadow-xl mb-8 transition-all font-semibold text-lg cursor-pointer"
+            className="bg-[var(--primary)] text-white px-10 py-4 rounded-full hover:shadow-xl mb-8 transition-all font-semibold text-lg cursor-pointer"
           >
             Book Appointment
           </motion.button>
@@ -86,7 +87,7 @@ const Hero = () => {
             className="flex items-center gap-3 bg-white rounded-2xl p-4 shadow-lg inline-flex"
           >
             <span className="text-gray-800 font-semibold">Google Rating</span>
-            <span className="font-bold text-[#b49268] text-2xl">4.7</span>
+            <span className="font-bold text-[var(--primary)] text-2xl">4.7</span>
             <div className="flex text-yellow-500">
               {[...Array(5)].map((_, i) => (
                 <motion.div
@@ -128,8 +129,8 @@ const Hero = () => {
             ))}
           </AnimatePresence>
 
-          <div className="absolute -top-8 -right-8 w-32 h-32 bg-[#b49268]/10 rounded-full blur-2xl"></div>
-          <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[#b49268]/10 rounded-full blur-2xl"></div>
+          <div className="absolute -top-8 -right-8 w-32 h-32 bg-[var(--primary)]/10 rounded-full blur-2xl"></div>
+          <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[var(--primary)]/10 rounded-full blur-2xl"></div>
         </motion.div>
 
         {/* Mobile Slider */}
@@ -160,13 +161,13 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-white rounded-3xl shadow-2xl p-6 flex items-center gap-4 border border-[#e5e5e5]"
+              className="bg-white rounded-3xl shadow-2xl p-6 flex items-center gap-4 border border-[var(--border)]"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-[#b49268] to-[#b49268] rounded-2xl flex items-center justify-center text-white flex-shrink-0">
+              <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[var(--primary)] rounded-2xl flex items-center justify-center text-white flex-shrink-0">
                 <FaClock className="text-2xl" />
               </div>
               <div>
-                <p className="font-bold text-[#b49268] mb-1">Opening Hours</p>
+                <p className="font-bold text-[var(--primary)] mb-1">Opening Hours</p>
                 <p className="text-sm text-gray-800">Mon to Sat 09:00 AM - 08:30 PM</p>
               </div>
             </motion.div>
@@ -176,13 +177,13 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.9 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="bg-white rounded-3xl shadow-2xl p-6 flex items-center gap-4 border border-[#e5e5e5]"
+              className="bg-white rounded-3xl shadow-2xl p-6 flex items-center gap-4 border border-[var(--border)]"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-[#b49268] to-[#9a7a5c] rounded-2xl flex items-center justify-center text-white flex-shrink-0">
+              <div className="w-14 h-14 bg-gradient-to-br from-[var(--primary)] to-[#9a7a5c] rounded-2xl flex items-center justify-center text-white flex-shrink-0">
                 <FaPhoneAlt className="text-2xl" />
               </div>
               <div>
-                <p className="font-bold text-[#b49268] mb-1">Need Dental Services?</p>
+                <p className="font-bold text-[var(--primary)] mb-1">Need Dental Services?</p>
                 <p className="text-sm text-gray-800">Call: +91-9087669000</p>
               </div>
             </motion.div>

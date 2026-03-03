@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { colors } from '../colors';
 import { useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import doctor1 from '../assets/doctor-1.jpg';
@@ -84,7 +85,7 @@ const TeamPage = () => {
               onClick={handleClose}
               className="absolute top-6 right-6 z-10 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors"
             >
-              <FaTimes className="text-[#b49268] text-xl" />
+              <FaTimes className="text-[var(--primary)] text-xl" />
             </button>
             <div className="grid md:grid-cols-2 gap-8 p-8">
               <div>
@@ -97,15 +98,15 @@ const TeamPage = () => {
                 </div>
               </div>
               <div>
-                <h2 className="text-4xl font-light text-[#b49268] mb-3">{team[selectedDoctor].name}</h2>
-                <p className="text-[#b49268] text-lg mb-6">{team[selectedDoctor].role}</p>
+                <h2 className="text-4xl font-light text-[var(--primary)] mb-3">{team[selectedDoctor].name}</h2>
+                <p className="text-[var(--primary)] text-lg mb-6">{team[selectedDoctor].role}</p>
                 <p className="text-gray-800 leading-relaxed mb-6">{team[selectedDoctor].bio}</p>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#b49268] mb-4">Specialties</h3>
+                  <h3 className="text-xl font-semibold text-[var(--primary)] mb-4">Specialties</h3>
                   <div className="space-y-2">
                     {team[selectedDoctor].specialties.map((specialty, i) => (
                       <div key={i} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-[#b49268] rounded-full"></div>
+                        <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
                         <span className="text-gray-800">{specialty}</span>
                       </div>
                     ))}
@@ -115,7 +116,7 @@ const TeamPage = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => window.location.href = '/book-appointment'}
-                  className="mt-8 bg-[#b49268] text-white px-8 py-3 rounded-full font-semibold cursor-pointer"
+                  className="mt-8 bg-[var(--primary)] text-white px-8 py-3 rounded-full font-semibold cursor-pointer"
                 >
                   Book Appointment
                 </motion.button>
@@ -132,8 +133,8 @@ const TeamPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4 text-sm font-bold tracking-widest uppercase">Meet Our Team</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-[#36454F] mb-6">Our Expert Dental Professionals</h1>
+          <p className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4 text-sm font-bold tracking-widest uppercase">Meet Our Team</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-[var(--secondary)] mb-6">Our Expert Dental Professionals</h1>
           <p className="text-gray-800 max-w-2xl mx-auto text-lg">
             Our experienced dental team is here to make every visit positive and personalized with gentle hands and caring hearts.
           </p>
@@ -159,9 +160,9 @@ const TeamPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
               <div className="p-6 text-center">
-                <h3 className="text-[#b49268] font-bold text-xl mb-2">{member.name}</h3>
+                <h3 className="text-[var(--primary)] font-bold text-xl mb-2">{member.name}</h3>
                 <p className="text-gray-800">{member.role}</p>
-                <button className="mt-4 text-[#b49268] font-semibold hover:text-[#b49268] transition-colors">
+                <button className="mt-4 text-[var(--primary)] font-semibold hover:text-[var(--primary)] transition-colors">
                   View Details →
                 </button>
               </div>

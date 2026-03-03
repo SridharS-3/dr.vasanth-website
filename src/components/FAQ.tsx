@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { colors } from '../colors';
 import { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 import faqImage from '../assets/faq.jpg';
@@ -53,8 +54,8 @@ const FAQ = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <p className="text-[#b49268] uppercase tracking-wider text-sm font-semibold mb-4">Everything You Need To Know</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3d4a5c] mb-8">
+            <p className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4">Everything You Need To Know</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--tertiary)] mb-8">
               Frequently Asked<br />Questions
             </h2>
 
@@ -76,7 +77,7 @@ const FAQ = () => {
                     <motion.span
                       animate={{ rotate: openIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="text-[#b49268] flex-shrink-0 ml-4"
+                      className="text-[var(--primary)] flex-shrink-0 ml-4"
                     >
                       <FaChevronDown />
                     </motion.span>

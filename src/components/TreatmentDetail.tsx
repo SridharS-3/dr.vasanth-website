@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { colors } from '../colors';
 import { FaArrowLeft, FaCheckCircle, FaTooth } from 'react-icons/fa';
 import { useNavigate, useParams } from 'react-router-dom';
 import { treatmentData } from '../data/treatments';
@@ -32,7 +33,7 @@ const TreatmentDetail = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate('/')}
-          className="flex items-center gap-2 text-[#b49268] hover:text-gray-800 mb-8 font-semibold"
+          className="flex items-center gap-2 text-[var(--primary)] hover:text-gray-800 mb-8 font-semibold"
         >
           <FaArrowLeft /> Back to Home
         </motion.button>
@@ -42,8 +43,8 @@ const TreatmentDetail = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <p className="text-[#b49268] mb-2 text-lg">Our Specialities</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-[#36454F] mb-6">{treatment.title}</h1>
+          <p className="text-[var(--primary)] mb-2 text-lg">Our Specialities</p>
+          <h1 className="text-5xl md:text-6xl font-bold text-[var(--secondary)] mb-6">{treatment.title}</h1>
         </motion.div>
 
         {/* Layout 1: Overlapping images with decorative elements */}
@@ -101,7 +102,7 @@ const TreatmentDetail = () => {
                 transition={{ delay: 0.3 }}
                 className="md:col-span-2 bg-white rounded-3xl p-8 shadow-xl h-[400px] flex flex-col justify-center"
               >
-                <h3 className="text-3xl font-bold text-[#b49268] mb-4">Expert Care</h3>
+                <h3 className="text-3xl font-bold text-[var(--primary)] mb-4">Expert Care</h3>
                 <p className="text-gray-800 text-lg leading-relaxed">Experience world-class dental treatment with our specialized team and advanced technology.</p>
               </motion.div>
             </div>
@@ -112,7 +113,7 @@ const TreatmentDetail = () => {
                 transition={{ delay: 0.4 }}
                 className="md:col-span-2 bg-white rounded-3xl p-8 shadow-xl h-[350px] flex flex-col justify-center order-2 md:order-1"
               >
-                <h3 className="text-3xl font-bold text-[#b49268] mb-4">Your Comfort Matters</h3>
+                <h3 className="text-3xl font-bold text-[var(--primary)] mb-4">Your Comfort Matters</h3>
                 <p className="text-gray-800 text-lg leading-relaxed">We prioritize your comfort with gentle procedures and a relaxing environment.</p>
               </motion.div>
               <motion.div
@@ -166,9 +167,9 @@ const TreatmentDetail = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border-2 border-[#b49268]"
+                  className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border-2 border-[var(--primary)]"
                 >
-                  <p className="text-[#b49268] font-bold text-lg">Trusted by 8000+</p>
+                  <p className="text-[var(--primary)] font-bold text-lg">Trusted by 8000+</p>
                   <p className="text-gray-800">Happy Patients</p>
                 </motion.div>
               </motion.div>
@@ -213,7 +214,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.4 }}
             className="bg-white rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Introduction</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-6">Introduction</h2>
             <div className="grid md:grid-cols-3 gap-8 items-center">
               <div className="md:col-span-2">
                 <p className="text-gray-800 leading-relaxed text-lg mb-6">{treatment.introduction}</p>
@@ -236,7 +237,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.4 }}
             className="bg-white rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Introduction</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-6">Introduction</h2>
             <p className="text-gray-800 leading-relaxed text-lg mb-6">{treatment.introduction}</p>
             {treatment.description && (
               <p className="text-gray-800 leading-relaxed text-lg">{treatment.description}</p>
@@ -252,7 +253,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.4 }}
             className="bg-white rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Introduction</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-6">Introduction</h2>
             <p className="text-gray-800 leading-relaxed text-lg mb-6">{treatment.introduction}</p>
             {treatment.description && (
               <p className="text-gray-800 leading-relaxed text-lg">{treatment.description}</p>
@@ -267,9 +268,9 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white border-2 border-[#b49268] rounded-3xl p-10 mb-12"
+            className="bg-white border-2 border-[var(--primary)] rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
             <p className="text-gray-800 leading-relaxed text-lg">{treatment.candidates}</p>
           </motion.div>
         )}
@@ -286,8 +287,8 @@ const TreatmentDetail = () => {
               <div className="h-96 rounded-3xl overflow-hidden shadow-2xl order-2 md:order-1">
                 <img src={treatment.images[treatment.images.length - 2] || treatment.images[0]} alt={treatment.title} className="w-full h-full object-cover" />
               </div>
-              <div className="bg-white border-2 border-[#b49268] rounded-3xl p-10 order-1 md:order-2">
-                <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
+              <div className="bg-white border-2 border-[var(--primary)] rounded-3xl p-10 order-1 md:order-2">
+                <h2 className="text-3xl font-semibold text-[var(--primary)] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
                 <p className="text-gray-800 leading-relaxed text-lg">{treatment.candidates}</p>
               </div>
             </div>
@@ -300,9 +301,9 @@ const TreatmentDetail = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-white border-2 border-[#b49268] rounded-3xl p-10 mb-12"
+            className="bg-white border-2 border-[var(--primary)] rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-6">Who are the candidates for {treatment.title} treatment?</h2>
             <p className="text-gray-800 leading-relaxed text-lg">{treatment.candidates}</p>
           </motion.div>
         )}
@@ -315,9 +316,9 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.2 }}
             className="mb-12 bg-gray-50 py-16 -mx-6 px-6"
           >
-            <h2 className="text-4xl font-bold text-[#b49268] mb-12 text-center">Treatment Procedure</h2>
+            <h2 className="text-4xl font-bold text-[var(--primary)] mb-12 text-center">Treatment Procedure</h2>
             <div className="max-w-6xl mx-auto relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#b49268] via-[#b49268] to-[#b49268] hidden md:block"></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[var(--primary)] via-[#b49268] to-[var(--primary)] hidden md:block"></div>
               {treatment.procedure.map((step, index) => (
                 <motion.div
                   key={index}
@@ -343,7 +344,7 @@ const TreatmentDetail = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.15 + 0.3, type: 'spring', stiffness: 200 }}
                         whileHover={{ scale: 1.2, rotate: 360 }}
-                        className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[#b49268] to-[#9a7a5c] text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl z-10 hidden md:flex border-4 border-white"
+                        className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[var(--primary)] to-[#9a7a5c] text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl z-10 hidden md:flex border-4 border-white"
                       >
                         {index + 1}
                       </motion.div>
@@ -358,7 +359,7 @@ const TreatmentDetail = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.15 + 0.3, type: 'spring', stiffness: 200 }}
                         whileHover={{ scale: 1.2, rotate: 360 }}
-                        className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[#b49268] to-[#9a7a5c] text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl z-10 hidden md:flex border-4 border-white"
+                        className="absolute left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-[var(--primary)] to-[#9a7a5c] text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-2xl z-10 hidden md:flex border-4 border-white"
                       >
                         {index + 1}
                       </motion.div>
@@ -386,7 +387,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-8 text-center">Key Benefits</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-8 text-center">Key Benefits</h2>
             
             {/* Benefits Layout 1: Card grid with icons */}
             {layoutType === 0 && (
@@ -401,7 +402,7 @@ const TreatmentDetail = () => {
                     whileHover={{ y: -10, scale: 1.02 }}
                     className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all"
                   >
-                    <div className="w-14 h-14 bg-[#b49268] rounded-2xl flex items-center justify-center mb-4">
+                    <div className="w-14 h-14 bg-[var(--primary)] rounded-2xl flex items-center justify-center mb-4">
                       <FaCheckCircle className="text-white text-2xl" />
                     </div>
                     <p className="text-gray-800 leading-relaxed">{benefit}</p>
@@ -426,7 +427,7 @@ const TreatmentDetail = () => {
                     }`}
                   >
                     <div className="flex flex-col h-full">
-                      <div className="w-14 h-14 bg-[#b49268] rounded-2xl flex items-center justify-center mb-4">
+                      <div className="w-14 h-14 bg-[var(--primary)] rounded-2xl flex items-center justify-center mb-4">
                         <FaCheckCircle className="text-white text-2xl" />
                       </div>
                       <p className="text-gray-800 leading-relaxed flex-1">{benefit}</p>
@@ -451,7 +452,7 @@ const TreatmentDetail = () => {
                       className="bg-white border-2 border-gray-200 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
                     >
                       <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-10 h-10 bg-[#b49268] rounded-lg flex items-center justify-center">
+                        <div className="flex-shrink-0 w-10 h-10 bg-[var(--primary)] rounded-lg flex items-center justify-center">
                           <FaCheckCircle className="text-white text-lg" />
                         </div>
                         <p className="text-gray-800 leading-relaxed flex-1">{benefit}</p>
@@ -492,7 +493,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.2 }}
             className="bg-white rounded-3xl p-10 mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-8 text-center">Why Choose Us?</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-8 text-center">Why Choose Us?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {whyChooseUs.map((item, index) => (
                 <motion.div
@@ -504,8 +505,8 @@ const TreatmentDetail = () => {
                   whileHover={{ y: -10 }}
                   className="bg-white rounded-2xl p-6 text-center shadow-lg"
                 >
-                  <FaTooth className="text-[#b49268] text-4xl mx-auto mb-4" />
-                  <h3 className="text-[#b49268] font-semibold text-xl mb-2">{item.title}</h3>
+                  <FaTooth className="text-[var(--primary)] text-4xl mx-auto mb-4" />
+                  <h3 className="text-[var(--primary)] font-semibold text-xl mb-2">{item.title}</h3>
                   <p className="text-gray-800 text-sm">{item.desc}</p>
                 </motion.div>
               ))}
@@ -521,7 +522,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-8 text-center">Why Choose Us?</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-8 text-center">Why Choose Us?</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {whyChooseUs.map((item, index) => (
                 <motion.div
@@ -532,11 +533,11 @@ const TreatmentDetail = () => {
                   transition={{ delay: index * 0.1 }}
                   className="bg-white rounded-3xl p-8 shadow-xl flex items-start gap-6 hover:shadow-2xl transition-shadow"
                 >
-                  <div className="flex-shrink-0 w-16 h-16 bg-[#b49268] rounded-2xl flex items-center justify-center">
+                  <div className="flex-shrink-0 w-16 h-16 bg-[var(--primary)] rounded-2xl flex items-center justify-center">
                     <FaTooth className="text-white text-2xl" />
                   </div>
                   <div>
-                    <h3 className="text-[#b49268] font-bold text-xl mb-2">{item.title}</h3>
+                    <h3 className="text-[var(--primary)] font-bold text-xl mb-2">{item.title}</h3>
                     <p className="text-gray-800">{item.desc}</p>
                   </div>
                 </motion.div>
@@ -553,7 +554,7 @@ const TreatmentDetail = () => {
             transition={{ delay: 0.2 }}
             className="mb-12"
           >
-            <h2 className="text-3xl font-semibold text-[#b49268] mb-8 text-center">Why Choose Us?</h2>
+            <h2 className="text-3xl font-semibold text-[var(--primary)] mb-8 text-center">Why Choose Us?</h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 {whyChooseUs.slice(0, 2).map((item, index) => (
@@ -567,10 +568,10 @@ const TreatmentDetail = () => {
                     className="bg-white rounded-2xl p-8 shadow-xl border-l-4 border-gray-200"
                   >
                     <div className="flex items-center gap-4 mb-3">
-                      <div className="w-12 h-12 bg-[#b49268] rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-[var(--primary)] rounded-lg flex items-center justify-center">
                         <FaTooth className="text-white text-xl" />
                       </div>
-                      <h3 className="text-[#b49268] font-bold text-xl">{item.title}</h3>
+                      <h3 className="text-[var(--primary)] font-bold text-xl">{item.title}</h3>
                     </div>
                     <p className="text-gray-800 pl-16">{item.desc}</p>
                   </motion.div>
@@ -588,10 +589,10 @@ const TreatmentDetail = () => {
                     className="bg-white rounded-2xl p-8 shadow-xl border-r-4 border-gray-200"
                   >
                     <div className="flex items-center gap-4 mb-3">
-                      <div className="w-12 h-12 bg-[#b49268] rounded-lg flex items-center justify-center">
+                      <div className="w-12 h-12 bg-[var(--primary)] rounded-lg flex items-center justify-center">
                         <FaTooth className="text-white text-xl" />
                       </div>
-                      <h3 className="text-[#b49268] font-bold text-xl">{item.title}</h3>
+                      <h3 className="text-[var(--primary)] font-bold text-xl">{item.title}</h3>
                     </div>
                     <p className="text-gray-800 pl-16">{item.desc}</p>
                   </motion.div>
@@ -606,13 +607,13 @@ const TreatmentDetail = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="bg-[#b49268] text-white rounded-3xl p-12 text-center shadow-2xl"
+          className="bg-[var(--primary)] text-white rounded-3xl p-12 text-center shadow-2xl"
         >
           <h3 className="text-3xl font-semibold mb-4">Ready to Get Started?</h3>
           <p className="mb-8 text-lg">Book your appointment today and let us take care of your smile</p>
           <a 
             href="tel:+919876543210"
-            className="inline-block bg-white text-[#b49268] px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+            className="inline-block bg-white text-[var(--primary)] px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
           >
             Call Now: +91 98765 43210
           </a>
