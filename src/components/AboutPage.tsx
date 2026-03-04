@@ -13,7 +13,7 @@ const AboutPage = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="text-center md:text-left  pt-10 md:pt-0"
+            className="text-center md:text-left pt-10 md:pt-0"
           >
             <p className="text-[var(--primary)] mb-3 text-sm font-bold tracking-widest uppercase">About Us</p>
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--secondary)] mb-6 leading-tight">

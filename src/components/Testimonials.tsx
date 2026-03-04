@@ -20,7 +20,7 @@ const Testimonials = () => {
     {
       name: 'Santhosh J',
       role: 'Patient',
-      text: 'Dental Clip. Dental Clinic offers exceptional dental care with a highly professional and friendly team. The clinic is well-maintained, and appointments are efficiently managed. My wife had a very comfortable experience, and the treatment was thorough and effective. Highly recommended for anyone seeking quality dental services in Salem.'
+      text: 'Ivory Dentistry offers exceptional dental care with a highly professional and friendly team. The clinic is well-maintained, and appointments are efficiently managed. My wife had a very comfortable experience, and the treatment was thorough and effective. Highly recommended for anyone seeking quality dental services in Paramathi Velur.'
     },
     {
       name: 'Shiva',

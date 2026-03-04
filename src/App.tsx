@@ -17,6 +17,7 @@ import DentalInsights from './components/DentalInsights'
 import BookAppointment from './components/BookAppointment'
 import Gallery from './components/Gallery'
 import Braces from './components/Braces'
+import WhatsAppFloat from './components/WhatsAppFloat'
 
 function App() {
   const location = useLocation();
@@ -49,6 +50,7 @@ function App() {
         <Route path="/book-appointment" element={<BookAppointment />} />
       </Routes>
       <Footer />
+      <WhatsAppFloat />
     </>
   )
 }

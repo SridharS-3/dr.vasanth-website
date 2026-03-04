@@ -31,11 +31,32 @@ const Hero = () => {
 
   return (
     <section id="hero" className="bg-white min-h-screen px-4 md:px-6 py-6 md:py-10">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+        {/* Mobile Image First */}
+        <div className="md:hidden relative h-[400px] rounded-3xl overflow-hidden shadow-2xl order-1">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={doctors[0].id}
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -300, opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0"
+            >
+              <img src={doctors[0].image} alt={doctors[0].name} className="w-full h-full object-cover" />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <p className="font-bold text-xl mb-1 text-white">{doctors[0].name}</p>
+                <p className="text-sm text-white/90">{doctors[0].degree}</p>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
+          className="order-2 md:order-1"
         >
           <motion.p 
             initial={{ opacity: 0 }}
@@ -43,15 +64,15 @@ const Hero = () => {
             transition={{ delay: 0.2 }}
             className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4 text-lg font-semibold text-center md:text-left"
           >
-            Dental Clip. Dental Clinic
+            Ivory Dentistry
           </motion.p>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-5xl lg:text-7xl font-bold text-[var(--secondary)] mb-6 leading-tight"
+            className="text-4xl md:text-4xl lg:text-7xl font-bold text-[var(--secondary)] mb-6 leading-tight"
           >
-            The Most Trusted Dental Clip. Dental Clinic in Salem
+            Experience The Expert Dental Care Like Never Before
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -59,7 +80,7 @@ const Hero = () => {
             transition={{ delay: 0.4 }}
             className="text-gray-800 mb-6 text-lg"
           >
-            Advanced Care. Compassionate Smiles. Quality Dental Care for Your Whole Family.
+            Feel our gentle care and skilled doctors will keep you smiling forever.
           </motion.p>
           <motion.p 
             initial={{ opacity: 0 }}
@@ -67,7 +88,7 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="text-gray-800 mb-8 leading-relaxed"
           >
-            At <span className="font-semibold text-[var(--primary)]">Dental Clip. Dental Clinic</span>, we provide world-class dental solutions tailored to every member of your family. From routine <span className="font-semibold">dental checkups</span> to advanced <span className="font-semibold">laser treatments</span> and <span className="font-semibold">smile makeovers</span>, our expert team in Salem ensures a painless and comfortable experience. We combine state-of-the-art technology with a gentle touch to keep your smile healthy, bright, and confident.
+            At <span className="font-semibold text-[var(--primary)]">Dental Clip</span>, we provide world-class dental solutions tailored to every member of your family. From routine <span className="font-semibold">dental checkups</span> to advanced <span className="font-semibold">laser treatments</span> and <span className="font-semibold">smile makeovers</span>, our expert team in Paramathi Velur ensures a painless and comfortable experience. We combine state-of-the-art technology with a gentle touch to keep your smile healthy, bright, and confident.
           </motion.p>
           <motion.button 
             initial={{ opacity: 0 }}
@@ -107,7 +128,7 @@ const Hero = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative h-[600px] hidden md:block"
+          className="relative h-[600px] hidden md:block order-2"
         >
           <AnimatePresence mode="popLayout">
             {doctors.map((doctor, index) => (
@@ -133,29 +154,11 @@ const Hero = () => {
           <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-[var(--primary)]/10 rounded-full blur-2xl"></div>
         </motion.div>
 
-        {/* Mobile Slider */}
-        <div className="md:hidden relative h-[400px] rounded-3xl overflow-hidden shadow-2xl">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={doctors[0].id}
-              initial={{ x: 300, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -300, opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="absolute inset-0"
-            >
-              <img src={doctors[0].image} alt={doctors[0].name} className="w-full h-full object-cover" />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                <p className="font-bold text-xl mb-1 text-white">{doctors[0].name}</p>
-                <p className="text-sm text-white/90">{doctors[0].degree}</p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+
       </div>
       
       <div className="max-w-7xl mx-auto px-4 md:px-6 mt-4 md:mt-6">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

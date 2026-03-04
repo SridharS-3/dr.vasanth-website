@@ -43,10 +43,10 @@ const Header = () => {
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2"
         >
-          <div className="w-8 h-8 rounded" style={{ backgroundColor: colors.primary }}></div>
-          <div>
-            <div className="font-semibold text-xl" style={{ color: colors.primary }}>DENTAL CLIP</div>
-            <div className="text-xs tracking-wider" style={{ color: colors.primary }}>DENTAL CLINIC</div>
+          <img src="/dental clip logo.png" alt="Dental Clip Logo" className="w-24 h-24 object-contain" />
+          <div className="hidden md:block">
+            <div className="font-bold text-xl" style={{ color: colors.primary }}>DENTAL CLIP</div>
+            <div className="text-xs tracking-wider font-medium" style={{ color: colors.secondary }}>DENTAL CLINIC</div>
           </div>
         </motion.div>
         

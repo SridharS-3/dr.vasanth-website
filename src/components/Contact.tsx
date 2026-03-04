@@ -12,7 +12,7 @@ const Contact = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <p className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4">Get In Touch With Salem's Preferred Dental Experts</p>
+          <p className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4">Get In Touch With Paramathi Velur's Preferred Dental Experts</p>
           <h1 className="text-5xl md:text-6xl font-bold text-[var(--secondary)] mb-6">
             We Are Always Ready to Help<br />You and Answer Your Questions
           </h1>
@@ -47,7 +47,7 @@ const Contact = () => {
               <p className="text-gray-700 leading-relaxed">
                 No 17/3A6B, Alagapuram village,<br />
                 Junction Main Road, State Bank<br />
-                Colony, Salem – 636004,<br />
+                First Floor, Latha Rajagopalan Hospital, Old Bypass Road, Paramathi Velur, Namakkal – 638182,<br />
                 Tamil Nadu, India.
               </p>
             </div>
@@ -74,7 +74,7 @@ const Contact = () => {
                 At <span className="font-semibold text-[var(--primary)]">Dental Clip. Dental Clinic</span>, your comfort and convenience come first. Whether you have a question about a specific treatment, a suggestion for our team, or you are ready to book your consultation, we are here for you.
               </p>
               <p className="text-gray-700 mb-8 leading-relaxed">
-                Simply fill out the form below with your details, and our patient coordinator will get back to you shortly. For immediate assistance or to schedule an <span className="font-semibold text-[var(--primary)]">emergency dental appointment in Salem</span>, feel free to call us directly.
+                Simply fill out the form below with your details, and our patient coordinator will get back to you shortly. For immediate assistance or to schedule an <span className="font-semibold text-[var(--primary)]">emergency dental appointment in Paramathi Velur</span>, feel free to call us directly.
               </p>
 
               <form className="space-y-5">

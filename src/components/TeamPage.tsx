@@ -14,36 +14,60 @@ const TeamPage = () => {
 
   const team = [
     {
-      name: 'Dr. B. Keerthika BDS',
-      role: 'Dental Surgeon',
+      name: 'Dr. Vasanthan',
+      role: 'Specialist Orthodontist',
+      degree: 'B.SC, BDS, MDS, (ortho), PhD,(ortho) DHA (ortho), QCHP (ortho)',
+      yearsExperience: '15+ Years',
       image: doctor1,
-      bio: 'Dr. Keerthika is a highly skilled dental surgeon with expertise in comprehensive oral care. She is dedicated to providing gentle and effective treatments for all dental needs.',
-      specialties: ['General Dentistry', 'Oral Surgery', 'Preventive Care']
+      bio: 'Dr. Vasanthan is a dedicated orthodontist whose practice is defined by precision, innovation, and an unwavering commitment to lifelong learning. With a patient-centered approach, he transforms smiles through cutting-edge orthodontic solutions.',
+      education: 'BDS from Tamil Nadu Dr. MGR Medical University, MDS in Orthodontics from Saveetha University, PhD from Vinayaka Mission\'s Research Foundation University.',
+      experience: 'Professor and Head of Department of Orthodontics at Vinayaka Mission Dental College. International licenses: DHA (Dubai) and QCHP (Qatar).',
+      specialties: [
+        'Advanced clear aligner treatments (Invisalign)',
+        'Damon braces and Spark Ormco Aligners',
+        'Complex malocclusions and preventive orthodontics',
+        'International experience with DHA and QCHP licenses'
+      ]
     },
     {
-      name: 'Dr. B.Mehjabeen BDS.',
-      role: 'General Dentist',
+      name: 'Dr. Sabitha Vasanthan',
+      role: 'Oral and Maxillofacial Surgeon',
+      degree: 'MDS, PhD, MFDS RCPS (Glasg), FDS RCPS (Glasg)',
+      yearsExperience: '20+ Years',
       image: doctor2,
-      bio: 'Dr. Mehjabeen brings compassionate care and expertise to every patient. She specializes in creating comfortable dental experiences for patients of all ages.',
-      specialties: ['Family Dentistry', 'Cosmetic Procedures', 'Dental Checkups']
+      bio: 'Dr. Sabitha is a distinguished dental professional with over two decades of expertise in Oral and Maxillofacial Surgery, and Cosmetic Dentistry.',
+      education: 'BDS from Saveetha Dental College & Hospital, MDS in Oral and Maxillofacial Surgery from Tamil Nadu Dr. MGR Medical University, PhD in Dentistry from Vinayaka Mission\'s Research Foundation.',
+      experience: 'Over two decades of progressive achievements in Education, Clinical Practice, and Cosmetic dentistry. International credentials: MFDS RCPS(Glasgow) and FDS RCPS(Glasgow) from Royal College of Physicians & Surgeons of Glasgow, UK.',
+      specialties: [
+        'Oral and Maxillofacial Surgery',
+        'Cosmetic Dentistry',
+        'Forensic Odontology',
+        'International credentials from Royal College of Glasgow'
+      ]
     },
     {
-      name: 'Dr. Basil M Mathew BDS, MDS',
+      name: 'Dr. Basil M Mathew',
       role: 'Pediatric Dentist',
+      degree: 'BDS, MDS',
+      yearsExperience: '10+ Years',
       image: doctor3,
       bio: 'Dr. Basil specializes in pediatric dentistry, making dental visits fun and stress-free for children. His gentle approach helps kids develop healthy dental habits.',
       specialties: ['Pediatric Dentistry', 'Child Dental Care', 'Preventive Treatments']
     },
     {
-      name: 'Prof. Dr. J Sathiya Jeeva. BDS, MDS, PhD',
+      name: 'Prof. Dr. J Sathiya Jeeva',
       role: 'Implantologist',
+      degree: 'BDS, MDS, PhD',
+      yearsExperience: '25+ Years',
       image: doctor4,
       bio: 'Prof. Dr. Sathiya Jeeva is a renowned implantologist with extensive experience in dental implants and advanced restorative procedures.',
       specialties: ['Dental Implants', 'Bone Grafting', 'Full Mouth Rehabilitation']
     },
     {
-      name: 'Dr. Adhavan Balaji. K L M - B.D.S. M.D.S. F.C.C.C',
+      name: 'Dr. Adhavan Balaji K L M',
       role: 'Endodontist and Aesthetic Dental Specialist',
+      degree: 'B.D.S. M.D.S. F.C.C.C',
+      yearsExperience: '12+ Years',
       image: doctor5,
       bio: 'Dr. Adhavan is an expert in root canal treatments and aesthetic dentistry, combining technical precision with artistic vision for beautiful smiles.',
       specialties: ['Root Canal Treatment', 'Smile Makeovers', 'Aesthetic Dentistry']
@@ -99,15 +123,33 @@ const TeamPage = () => {
               </div>
               <div>
                 <h2 className="text-4xl font-light text-[var(--primary)] mb-3">{team[selectedDoctor].name}</h2>
-                <p className="text-[var(--primary)] text-lg mb-6">{team[selectedDoctor].role}</p>
+                <p className="text-[var(--primary)] text-lg mb-2">{team[selectedDoctor].role}</p>
+                {team[selectedDoctor].degree && (
+                  <p className="text-gray-600 text-sm mb-6">{team[selectedDoctor].degree}</p>
+                )}
                 <p className="text-gray-800 leading-relaxed mb-6">{team[selectedDoctor].bio}</p>
+                
+                {team[selectedDoctor].education && (
+                  <div className="mb-4">
+                    <h3 className="text-lg font-semibold text-[var(--primary)] mb-2">Education</h3>
+                    <p className="text-gray-800 text-sm leading-relaxed">{team[selectedDoctor].education}</p>
+                  </div>
+                )}
+                
+                {team[selectedDoctor].experience && (
+                  <div className="mb-6">
+                    <h3 className="text-lg font-semibold text-[var(--primary)] mb-2">Experience</h3>
+                    <p className="text-gray-800 text-sm leading-relaxed">{team[selectedDoctor].experience}</p>
+                  </div>
+                )}
+                
                 <div>
                   <h3 className="text-xl font-semibold text-[var(--primary)] mb-4">Specialties</h3>
                   <div className="space-y-2">
                     {team[selectedDoctor].specialties.map((specialty, i) => (
-                      <div key={i} className="flex items-center gap-2">
-                        <div className="w-2 h-2 bg-[var(--primary)] rounded-full"></div>
-                        <span className="text-gray-800">{specialty}</span>
+                      <div key={i} className="flex items-start gap-2">
+                        <div className="w-2 h-2 bg-[var(--primary)] rounded-full mt-2 flex-shrink-0"></div>
+                        <span className="text-gray-800 text-sm leading-relaxed">{specialty}</span>
                       </div>
                     ))}
                   </div>
@@ -140,7 +182,7 @@ const TeamPage = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -161,7 +203,8 @@ const TeamPage = () => {
               </div>
               <div className="p-6 text-center">
                 <h3 className="text-[var(--primary)] font-bold text-xl mb-2">{member.name}</h3>
-                <p className="text-gray-800">{member.role}</p>
+                <p className="text-gray-600 text-base font-semibold mb-2">{member.degree}</p>
+                <p className="text-gray-800 text-lg font-semibold mb-4">{member.role}</p>
                 <button className="mt-4 text-[var(--primary)] font-semibold hover:text-[var(--primary)] transition-colors">
                   View Details →
                 </button>

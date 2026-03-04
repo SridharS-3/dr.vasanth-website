@@ -37,23 +37,23 @@ const AboutUs = () => {
         >
           <p className="text-[var(--primary)] uppercase tracking-wider text-sm font-semibold mb-4">About Us</p>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--secondary)] mb-6 leading-tight">
-            Dental Clip. Dental Clinic – The Best Dental Care in Salem
+            Dental Clip – The Best Dental Care in Paramathi Velur
           </h2>
           <p className="text-gray-800 mb-6">
-            We are dedicated to providing exceptional oral care and ensuring your smile shines with confidence. At <span className="font-semibold">Dental Clip. Dental Clinic</span>, we understand that a healthy, beautiful smile is the foundation of your well-being.
+            Our practice is led by <span className="font-semibold">Dr. Vasanthan</span>, an internationally experienced Orthodontist & <span className="font-semibold">Dr. Sabitha</span>, a skilled Oral & Maxillofacial Surgeon. By combining advanced technology, advanced expertise, and a patient-first philosophy, we deliver exceptional results to our patients.
           </p>
           <p className="text-gray-800 mb-6">
-            Our team of <span className="font-semibold">highly skilled and experienced dentists in Salem</span> is committed to delivering top-quality care using the latest advancements in dental technology. As a premier <span className="font-semibold">multispeciality dental hospital</span>, we take pride in offering a comprehensive range of treatments tailored to your unique needs:
+            Our team of <span className="font-semibold">highly skilled and experienced dentists in Paramathi Velur</span> is committed to delivering top-quality care using the latest advancements in dental technology. As a premier <span className="font-semibold">multispeciality dental hospital</span>, we take pride in offering a comprehensive range of treatments tailored to your unique needs:
           </p>
           <div className="space-y-4 mb-8">
+            <p className="text-gray-800">
+              <span className="font-semibold">Advanced Orthodontics:</span> Modern braces and clear aligner solutions.
+            </p>
             <p className="text-gray-800">
               <span className="font-semibold">General Dentistry:</span> Painless extractions and routine care for all ages.
             </p>
             <p className="text-gray-800">
               <span className="font-semibold">Cosmetic Dentistry:</span> Professional teeth whitening and smile design.
-            </p>
-            <p className="text-gray-800">
-              <span className="font-semibold">Advanced Orthodontics:</span> Modern braces and clear aligner solutions.
             </p>
             <p className="text-gray-800">
               <span className="font-semibold">Laser & Implants:</span> Cutting-edge technology for faster healing and permanent results.

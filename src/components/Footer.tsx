@@ -8,8 +8,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 bg-[var(--primary)] rounded"></div>
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/dental clip logo.png" alt="Dental Clip Logo" className="w-14 h-14 object-contain" />
               <div>
                 <div className="text-black font-bold text-2xl">DENTAL CLIP</div>
                 <div className="text-[var(--primary)] text-xs tracking-widest font-semibold">DENTAL CLINIC</div>
@@ -80,7 +80,7 @@ const Footer = () => {
                   <FaMapMarkerAlt className="text-[var(--primary)] text-lg" /> Clinic Location
                 </p>
                 <p className="text-gray-700 text-sm leading-relaxed">
-                  No 17/3A6B, Alagapuram village, Junction Main Road, State Bank Colony, Salem – 636004, Tamil Nadu , India.
+                  First Floor, Latha Rajagopalan Hospital, Old Bypass Road, Paramathi Velur, Namakkal – 638182, Tamil Nadu, India.
                 </p>
               </div>
               <div>
